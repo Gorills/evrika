@@ -18,6 +18,8 @@ body
 
 h1, h2, h3, h4, h5, h6, p
     margin: 0
+h1, h2, h3, h4, h5, h6, p
+    padding: 0
 
 
 // pagination
@@ -172,6 +174,14 @@ h1, h2, h3, h4, h5, h6, p
     align-items: center
     opacity: 0
     //transition: $transition
+    // popup__closer
+    &__closer
+        position: fixed
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        z-index: 4
     // popup__inner
     &__inner
         width: 100%
@@ -180,6 +190,7 @@ h1, h2, h3, h4, h5, h6, p
         margin: 0 auto
         padding: 15px 20px
         position: relative
+        z-index: 5
     // popup__close
     &__close
         position: absolute
@@ -233,32 +244,32 @@ h1, h2, h3, h4, h5, h6, p
 
 // Header
 .header
-    //position: absolute
-    //top: 0
-    //left: 0
-    //right: 0
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
     width: 100%
-    padding: 15px 0
+
     z-index: 2
-    background-color: rgb(255, 255, 255)
-    border-bottom: $border
+
+
     transition: $transition
     // header__inner
     &__inner
         width: 100%
         margin: 0 auto
-
+        border-bottom: $border
         display: flex
         justify-content: space-between
-        align-items: center
-
+        align-items: flex-end
+        padding: 12px 0 5px 8px
     //  header__logo-link
     &__logo-link
         display: block
 
     // header__logo
     &__logo
-        height: 40px
+        height: 60px
     // header__nav
     &__nav
         display: flex
@@ -267,8 +278,7 @@ h1, h2, h3, h4, h5, h6, p
     // header__link
     &__link
         text-decoration: none
-        color: #333333
-        text-transform: uppercase
+        color: #ffffff
         font-size: 15px
         letter-spacing: 0.45px
         font-weight: 500
@@ -280,7 +290,7 @@ h1, h2, h3, h4, h5, h6, p
             height: 3px
             background-color: $color-hover
             left: 0
-            top: 49px
+            top: 30px
             transition: $transition
         &:hover::after
             width: 100%
@@ -290,60 +300,99 @@ h1, h2, h3, h4, h5, h6, p
     // header__social
     &__social
         display: flex
-        align-items: center
+        align-items: flex-end
+    // header__callback
+    &__callback
+        margin-right: 25px
+        font-size: 13px
+        color: $color-gray
+        text-decoration: none
+        transition: $transition
+        margin-bottom: -5px
+        &:hover
+            color: #fff
+
+
     // header__social-item
     &__social-item
         display: flex
-        align-items: center
+        align-items: flex-end
     &__social-item + &__social-item
         margin-left: 15px
     // header__social-icon
     &__social-icon
-        width: 40px
-        height: 40px
+        width: 25px
+        height: 25px
         border-radius: 100%
         display: flex
         align-items: center
         justify-content: center
         color: #fff
         text-decoration: none
+        transition: $transition
         i
-            padding-top: 3px
+            padding-top: 2px
+            display: none
+            font-size: 20px
+        &:hover
+            background: none
+            i
+                display: block
+
+
+
+    &__social-icon + &__social-icon
+        margin-left: 10px
+
 
     // header__social-label
     &__social-label
         font-size: 11px
-        color: #333
+        color: #fff
         margin-left: 5px
 
 
     // header_fixed
     &_fixed
         position: fixed
-        background-color: #fff
+        background-color: rgba(25, 25, 25, 0.8)
         box-shadow: $box-shadow
+        z-index: 20
+        .header__inner
+            padding: 15px 0
+            align-items: center
+            border: none
+        .header__link::after
+            top: 43px
+        .header-bottom
+            top: 66px
+        .header__social
+            align-items: center
+        .header__social-item
+            align-items: center
+.social-icon-one
+    background-color: $color-hover-alter1
 
-.social-icon-accent
-    background-color: $color-hover-alter
-.social-icon-alter
-    background-color: $color-hover
-
+.social-icon-two
+    background-color: $color-hover-alter2
+.social-icon-three
+    background-color: $color-hover-alter3
 // header-bottom
 .header-bottom
-    background-color: #333
-
+    background-color: rgba(255, 255, 255, 1)
+    box-shadow: $box-shadow
     height: 0
     display: flex
     justify-content: center
     align-items: center
     position: absolute
-    top: 66px
+    top: 54px
     z-index: 10
     width: 100%
     max-width: 1170px
     transition: $transition
     &_active
-        height: 350px
+        height: 400px
         padding: 20px 40px
 
 
@@ -356,7 +405,7 @@ h1, h2, h3, h4, h5, h6, p
     // slider__bcg
     &__bcg
         width: 100%
-        height: 50vh
+        height: 80vh
         min-height: 340px
         position: relative
         overflow: hidden
@@ -371,7 +420,7 @@ h1, h2, h3, h4, h5, h6, p
         left: 50%
         transform: translate(-50%,-50%)
         width: 100%
-        height: 50vh
+        height: 80vh
         min-height: 340px
         object-fit: cover
         opacity: 70%
@@ -646,6 +695,265 @@ h1, h2, h3, h4, h5, h6, p
 
 
 
+
+
+
+.callback
+    width: 100%
+    margin: 0 auto
+    background-color: $background-color-light
+    // .callback__inner
+    &__inner
+        padding: 60px 0
+        display: flex
+        justify-content: space-between
+    // .callback__left
+    &__left
+        width: 100%
+        max-width: 300px
+
+    // .callback__title
+    &__title
+        font-weight: 700
+        font-size: 48px
+        line-height: 1.1
+        margin-bottom: 20px
+    // .callback__phone
+    &__phone
+        display: flex
+        flex-direction: column
+
+    // .callback__link
+    &__link
+        font-size: 24px
+        font-weight: 700
+        color: #333333
+        text-decoration: none
+    // .callback__middle
+    &__middle
+    // .callback__right
+    &__right
+        max-width: 300px
+        width: 100%
+    // .callback__form
+    &__form
+        display: flex
+        flex-direction: column
+    // .callback__input
+    &__input
+        margin-top: 20px
+        padding: 10px
+        font-size: 22px
+    // .callback__btn
+    &__btn
+        border: none
+        margin-top: 20px
+        cursor: pointer
+    // .callback__personal
+    &__personal
+        margin-top: 15px
+        font-size: 13px
+        text-align: center
+        a
+            color: #333
+
+.callback__middle i
+    font-size: 38px
+    color: $color-hover-alter3
+    margin-right: 20px
+    margin-bottom: 15px
+
+.callback-faq
+
+
+    // .callback-faq__title
+    &__title
+        text-transform: uppercase
+        font-size: 16px
+        margin-bottom: 20px
+        font-weight: 700
+    // .callback-faq__list
+    &__list
+    // .callback-faq__item
+    &__item
+        display: flex
+        align-items: center
+
+    // .callback-faq__name
+    &__name
+
+
+
+.uslugi
+    width: 100%
+    margin: 0 auto
+    padding: 60px 0
+    // .uslugi__inner
+    &__inner
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 40px
+
+    // .uslugi__item
+    &__item
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        height: 250px
+        position: relative
+        padding: 15px
+        overflow: hidden
+        color: #fff
+        text-decoration: none
+        background-color: #333
+        transition: $transition
+        &:hover
+            box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2)
+            transform: translate(-5px,-5px)
+
+
+    // .uslugi__img
+    &__img
+        opacity: 50%
+        //height: 100%
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        object-fit: cover
+        position: absolute
+        z-index: 2
+    // .uslugi__title
+    &__title
+        z-index: 3
+        font-size: 24px
+        text-transform: uppercase
+        margin-bottom: 15px
+    // .uslugi__info
+    &__info
+        z-index: 3
+        font-size: 22px
+
+.item-one
+    grid-column: 1 / 3
+    img
+        width: 100%
+
+.item-two
+    img
+        height: 100%
+
+.item-three
+    img
+        height: 100%
+.item-for
+    img
+        height: 100%
+.item-five
+    img
+        height: 100%
+.item-six
+    grid-column: 3 / 5
+    img
+        width: 100%
+
+
+
+.about
+    padding: 60px 0
+    margin: 0 auto
+    background-color: $background-color-light
+    font-size: 14px
+    font-weight: 300
+    // .about__inner
+    &__inner
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 20px
+    // .about__item
+    &__item
+
+    // .about__title
+    &__title
+        margin-bottom: 15px
+        font-size: 24px
+    // .about__text
+    &__text
+        margin-bottom: 15px
+    // .about__list
+    &__list
+        margin-bottom: 15px
+        padding-left: 15px
+        list-style: none
+        // .about__list_item
+        &_item
+            position: relative
+            padding: 0
+            margin: 0
+            &::after
+                content: ""
+                height: 4px
+                width: 4px
+                background-color: #333
+                top: 50%
+                transform: translateY(-50%)
+                left: -13px
+                border-radius: 50%
+                position: absolute
+
+    // .about__info
+    &__info
+        padding: 20px
+        background-color: #fff
+    // .about__h4
+    &__h4
+        margin-bottom: 15px
+        font-weight: 700
+
+        font-size: 18px
+    // .about__contacts
+    &__contacts
+        margin-bottom: 15px
+    // .about__hone
+    &__phone
+        font-weight: 700
+        font-size: 18px
+
+
+
+.clients
+    width: 100%
+    padding: 80px 0
+    margin: 0 auto
+    // .clients__inner
+    &__inner
+        display: grid
+        grid-template-columns: 1fr 2fr
+        align-items: center
+        grid-gap: 40px
+    // .clients__left
+    &__left
+    // .clients__title
+    &__title
+        margin-bottom: 20px
+        font-size: 24px
+
+    // .clients__text
+    &__text
+        margin-bottom: 40px
+    // .clients__right
+    &__right
+
+    // .clients__name
+    &__name
+    // .clients__clients
+    &__clients
+    // .clients__date
+    &__date
+
+
+
+
 // footer
 .footer
     border-top: $border
@@ -695,7 +1003,7 @@ h1, h2, h3, h4, h5, h6, p
     // footer__logo
     &__logo
         width: 100%
-        max-width: 350px
+        max-width: 100px
         display: block
         margin: 0 auto
     // footer__logo-link
