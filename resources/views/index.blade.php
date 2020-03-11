@@ -25,7 +25,7 @@
                 <div class="slider__inner">
                     <h2 class="slider__title">{{ $stock->title }}</h2>
                     <div class="slider__text">{{ $stock->description }}</div>
-                    <a href="{{ url("/stock/$stock->slug") }}" class="slider__btn btn btn__accent">Подробнее</a>
+                    <a href="{{ url("/stock/$stock->slug") }}" class="slider__btn btn btn__accent" target="_blank">Подробнее</a>
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
                 <div class="slider__inner">
                     <h2 class="slider__title">Стандартный слайд</h2>
                     <div class="slider__text">Стандартное описание</div>
-                    <a href="#" class="slider__btn btn btn__accent">Подробнее</a>
+{{--                    <a href="#" class="slider__btn btn btn__accent">Подробнее</a>--}}
                 </div>
             </div>
         </div>
@@ -147,11 +147,11 @@
                 @foreach($works as $work)
                     <div class="clients__right ">
                         <p class="clients__name">{{ $work->title }}</p>
-                        <p class="clients__clients">{{ $work->full_description }}</p>
+                        <p class="clients__clients">{{ Str::words($work->full_description, 30) }}</p>
                         <p class="clients__date">{{ $work->description }}</p>
 
                         <div>
-                            <a class="clients__link" href="{{ $work->url }}">Читать полностью</a>
+                            <a class="clients__link" href="{{ url($work->url) }}" target="_blank">Читать полностью</a>
                         </div>
                     </div>
                 @endforeach

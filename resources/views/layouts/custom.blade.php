@@ -223,11 +223,14 @@
 <script>
     $('.slick').slick({
         infinite: true,
-        speed: 300,
+        speed: 500,
         slidesToShow: 1,
         adaptiveHeight: true,
         autoplay: true,
         pauseOnFocus: false,
+        pauseOnHover: false,
+        pauseOnDotsHover: false,
+        dots: true,
 
     });
     $('.clients__slider').slick({
@@ -240,6 +243,8 @@
         arrows: true,
 
     });
+
+   
 </script>
 </body>
 </html>

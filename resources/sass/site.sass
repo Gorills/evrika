@@ -262,7 +262,7 @@ h1, h2, h3, h4, h5, h6, p
         display: flex
         justify-content: space-between
         align-items: flex-end
-        padding: 12px 0 5px 8px
+        padding: 12px 0 8px
     //  header__logo-link
     &__logo-link
         display: block
@@ -370,8 +370,7 @@ h1, h2, h3, h4, h5, h6, p
             align-items: center
         .header__social-item
             align-items: center
-        .header__social-icon
-            color: #333 !important
+
 .social-icon-one
     background-color: $color-hover-alter1
 
@@ -743,8 +742,8 @@ h1, h2, h3, h4, h5, h6, p
         margin-bottom: 40px
     // .clients__slider
     &__slider
-        padding: 120px 100px
-        border: $border
+        padding: 60px 120px
+        //border: $border
         position: absolute
         right: 0
         top: 50%
@@ -756,6 +755,7 @@ h1, h2, h3, h4, h5, h6, p
 
     // .clients__right
     &__right
+        outline: none
         display: flex
         justify-content: center
         flex-direction: column
@@ -789,11 +789,36 @@ h1, h2, h3, h4, h5, h6, p
         color: #333
         display: inline-block
         margin: 0 auto
-
+        transition: $transition
+        &:hover
+            background-color: $accent-hover
+            color: #fff
 
 .posadochnaya
     height: 300vh
 
+
+
+
+.slider-test
+    width: 100%
+    margin: 0 auto
+    padding: 15px
+
+.slick-prev
+    position: absolute
+    z-index: 5
+    left: 15px
+    top: 50%
+.slick-next
+    position: absolute
+    z-index: 5
+    right: 15px
+    top: 50%
+
+.slick-dots
+    position: absolute
+    bottom: 15px
 
 
 // footer
