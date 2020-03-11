@@ -5,23 +5,23 @@
 @section('content')
     <div class="container">
         @component('admin.components.breadcrumb')
-            @slot('title') Список работ @endslot
+            @slot('title') Список отзывов @endslot
             @slot('parent') Главная @endslot
-            @slot('active') Все работы @endslot
+            @slot('active') Все отывы @endslot
 
         @endcomponent
 
         <hr>
         <div class="text-right">
-            <a href="{{route('admin.work.create')}}" class="btn btn-primary mb-3"><i class="fas fa-plus mr-3"></i>Содать работу</a>
+            <a href="{{route('admin.work.create')}}" class="btn btn-primary mb-3"><i class="fas fa-plus mr-3"></i>Добавить отзыв</a>
         </div>
 
         <table class="table table-striped mb-5">
             <thead>
             <tr>
                 <th scope="col">id</th>
-                <th scope="col">image</th>
-                <th scope="col">title</th>
+                <th scope="col">Дата</th>
+                <th scope="col">ФИО</th>
 
                 <th scope="col">Действие</th>
             </tr>
@@ -31,11 +31,7 @@
             @forelse($works as $work)
                 <tr>
                     <th scope="row">{{ $work->id }}</th>
-                    <td>
-
-                        <img style="height: 40px" src="{{ Storage::url($work->image) }}" alt="">
-
-                    </td>
+                    <td>{{ $work->description }}</td>
                     <td>{{ $work->title }}</td>
 
 

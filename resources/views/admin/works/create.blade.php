@@ -4,9 +4,9 @@
 @section('content')
     <div class="container">
         @component('admin.components.breadcrumb')
-            @slot('title') Создание работы @endslot
+            @slot('title') Добавить отзыв @endslot
             @slot('parent') Главная @endslot
-            @slot('active') Работы @endslot
+            @slot('active') Отзывы @endslot
         @endcomponent
 
         <hr />

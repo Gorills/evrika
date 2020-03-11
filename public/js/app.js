@@ -49672,9 +49672,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\1\Desktop\OS\OSPanel\domains\sibclimat\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\1\Desktop\OS\OSPanel\domains\sibclimat\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\1\Desktop\OS\OSPanel\domains\sibclimat\resources\sass\site.sass */"./resources/sass/site.sass");
+__webpack_require__(/*! C:\Users\1\Desktop\OS\OSPanel\domains\evrika\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Users\1\Desktop\OS\OSPanel\domains\evrika\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\Users\1\Desktop\OS\OSPanel\domains\evrika\resources\sass\site.sass */"./resources/sass/site.sass");
 
 
 /***/ })

@@ -40,6 +40,8 @@
 
 <div class="popup">
     <div class="container">
+
+        <div class="popup__closer"></div>
         <div class="popup__inner">
             <a href="" class="popup__close"><i class="fas fa-times"></i></a>
             <p class="popup__title">Оставить заявку</p>
@@ -66,41 +68,55 @@
 <header class="header">
     <div class="container">
         <div class="header__inner">
-            <a class="header__logo-link" href="{{ url('/') }}">
-                <img src="{{ asset('images/001.png') }}" alt="" class="header__logo">
-            </a>
+{{--            <a class="header__logo-link" href="{{ url('/') }}">--}}
+{{--                <img src="{{ asset('images/001.png') }}" alt="" class="header__logo">--}}
+{{--            </a>--}}
             <nav class="header__nav">
-                <a href="{{url('/')}}" class="header__link">Главная</a>
-                <a href="{{url('/#about')}}" class="header__link">О компании</a>
-                <a href="{{url('/#catalog')}}" class="header__link">Каталог</a>
-                <a href="{{url('/#works')}}" class="header__link">Наши работы</a>
-                <a href="{{url('/contacts')}}" class="header__link">Контакты</a>
+                <a href="{{url('/')}}" class="header__link link-none">Главная</a>
+                <a href="{{url('/')}}" class="header__link">Купить</a>
+                <a href="{{url('/#about')}}" class="header__link">Продать</a>
+{{--                <a href="{{url('/#catalog')}}" class="header__link">Новостройки</a>--}}
+                <a href="{{url('/#works')}}" class="header__link">Коммерческая недвижимость</a>
+                <a href="{{url('/yuridicheskie-uslugi')}}" class="header__link">Юридические услуги</a>
             </nav>
             <div class="header__social">
 
 
                 <div class="header__social-item">
-                    <a href="#" class="header__social-icon social-icon-alter">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
+
+                    <a href="#" class="header__callback">
+                        <p>8 (3822) 959-039</p>
+                        <p>Обратный звонок</p>
+
                     </a>
-                    <p class="header__social-label">Заказать звонок</p>
+
+
+                    <a href="#" class="header__social-icon social-icon-one">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="header__social-icon social-icon-two">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="header__social-icon social-icon-three">
+                        <i class="fab fa-vk"></i>
+                    </a>
                 </div>
 
-{{--                <div class="toggle-menu" id="menu">--}}
-{{--                    <div class="toggle-section">--}}
-{{--                        <a href="#" class="menu-btn">--}}
-{{--                            <span></span>--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                <div class="toggle-menu" id="menu">
+                    <div class="toggle-section">
+                        <a href="#" class="menu-btn">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
 
-{{--        <div class="header-bottom">--}}
+        <div class="header-bottom">
 
 
-{{--        </div>--}}
+        </div>
     </div>
 </header>
 @yield('content')
@@ -131,7 +147,7 @@
 
             </div>
         </div>
-        <a class="footer__logo-link" href="{{ url('/') }}"><img class="footer__logo" src="{{ asset('images/001.png') }}" alt=""></a>
+{{--        <a class="footer__logo-link" href="{{ url('/') }}"><img class="footer__logo" src="{{ asset('images/001.png') }}" alt=""></a>--}}
     </div>
 </footer>
 
@@ -151,7 +167,7 @@
     // })
     //
     //
-    $(".header__social-icon").click(function(e) {
+    $(".header__callback").click(function(e) {
         e.preventDefault();
         $(".popup").toggleClass('popup_active');
 
@@ -159,6 +175,11 @@
 
     $(".popup__close").click(function(e) {
         e.preventDefault();
+        $(".popup").removeClass('popup_active');
+
+    })
+    $(".popup__closer").click(function(e) {
+        // e.preventDefault();
         $(".popup").removeClass('popup_active');
 
     })
@@ -207,6 +228,16 @@
         adaptiveHeight: true,
         autoplay: true,
         pauseOnFocus: false,
+
+    });
+    $('.clients__slider').slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        pauseOnFocus: false,
+        arrows: true,
 
     });
 </script>

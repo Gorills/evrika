@@ -16,10 +16,9 @@ class CreateWorksTable extends Migration
         Schema::create('works', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('slug')->unique();
-            $table->text('image')->nullable();
             $table->text('description')->nullable();
             $table->text('full_description')->nullable();
+            $table->text('url')->nullable();
             $table->timestamps();
         });
     }

@@ -20,6 +20,9 @@ class CreateStocksTable extends Migration
             $table->text('image')->nullable();
             $table->text('description')->nullable();
             $table->text('full_description')->nullable();
+            $table->text('meta_title')->nullable();
+            $table->text('meta_description')->nullable();
+
             $table->timestamps();
         });
     }

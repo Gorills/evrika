@@ -19,6 +19,16 @@
 </div>
 
 <div class="form-group">
+    <label>Мета заголовок</label>
+    <textarea class="form-control" placeholder="Мета заголовок" name="meta_title">{{ $stock->meta_title ?? "" }}</textarea>
+</div>
+
+<div class="form-group">
+    <label>Мета описание</label>
+    <textarea class="form-control" placeholder="Мета описание" name="meta_description">{{ $stock->meta_description ?? "" }}</textarea>
+</div>
+
+<div class="form-group">
 <label>Фото</label>
 <input class="form-control btn" type="file" name="image" required>
 </div>

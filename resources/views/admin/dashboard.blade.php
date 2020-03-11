@@ -95,13 +95,14 @@
 
 
 
-    <h2 class="text-center mb-5">Работы</h2>
+    <h2 class="text-center mb-5">Отывы</h2>
     <table class="table table-striped mb-5">
         <thead>
         <tr>
             <th scope="col">id</th>
 
-            <th scope="col">title</th>
+            <th scope="col">Дата</th>
+            <th scope="col">ФИО</th>
 
             <th class="text-right" scope="col"><a href="{{route('admin.work.create')}}"><i class="fas fa-plus mr-3"></i></a>Действие</th>        </tr>
         </thead>
@@ -110,6 +111,7 @@
             <tr>
                 <th scope="row">{{ $work->id }}</th>
 
+                <td>{{ $work->description }}</td>
                 <td>{{ $work->title }}</td>
 
                 <td class="text-right">
@@ -123,13 +125,13 @@
             </tr>
         @empty
             <tr>
-                <td colspan="3" class="text-center"><h2>Данные отсутствуют</h2></td>
+                <td colspan="4" class="text-center"><h2>Данные отсутствуют</h2></td>
             </tr>
         @endforelse
         </tbody>
         <tfoot>
         <tr>
-            <td colspan="3">
+            <td colspan="4">
                 <ul class="pagination text-right">
                     {{ $works->links() }}
                 </ul>

@@ -43,9 +43,9 @@ class WorkController extends Controller
      */
     public function store(Request $request)
     {
-        $path = $request->file('image')->store('works');
+
         $params = $request->all();
-        $params['image'] = $path;
+
 
 
         Work::create($params);
@@ -88,10 +88,9 @@ class WorkController extends Controller
      */
     public function update(Request $request, Work $work)
     {
-        Storage::delete($work->image);
-        $path = $request->file('image')->store('work');
+
         $params = $request->all();
-        $params['image'] = $path;
+
 
         $work->update($params);
         return redirect()->route('admin.work.index');
@@ -105,7 +104,7 @@ class WorkController extends Controller
      */
     public function destroy(Work $work)
     {
-        Storage::delete($work->image);
+
         $work->delete();
 
         return redirect()->route('admin.work.index');
