@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/categories/{slug}', 'ShopController@category')->name('category');
+Route::get('/stock/{slug}', 'ShopController@stock')->name('stock');
 
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware' => ['auth']], function (){
     Route::get('/', 'DashboardController@dashboard')->name('admin.dashboard');
@@ -32,14 +32,9 @@ Route::get('/works', 'WorksController@index')->name('works');
 
 
 
-//
-//Route::get('/kondicionery', function () {
-//    return view('kondicionery');
-//});
-//
-//Route::get('/kondicionery/nastennye-split-sistemy', function () {
-//    return view('nastennye-split-sistemy');
-//});
+Route::get('/yuridicheskie-uslugi', function () {
+    return view('yuridicheskie-uslugi');
+});
 
 
 Route::get('/contacts', function () {

@@ -4,18 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Product;
+use App\Stock;
 use Illuminate\Http\Request;
 
 class ShopController extends Controller
 {
-    public function category($slug) {
+    public function stock($slug) {
 
-        $category = Category::where('slug', $slug)->first();
+        $stock = Stock::where('slug', $slug)->first();
 
-        return view('category', [
+        return view('stock', [
 
-            'category' => $category,
-            'categories' => $category->children()->get()
+            'stock' => $stock,
+            'stocks' => $stock->get()
 
         ]);
 

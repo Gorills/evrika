@@ -72,11 +72,12 @@
 {{--                <img src="{{ asset('images/001.png') }}" alt="" class="header__logo">--}}
 {{--            </a>--}}
             <nav class="header__nav">
+                <a href="{{url('/')}}" class="header__link link-none">Главная</a>
                 <a href="{{url('/')}}" class="header__link">Купить</a>
                 <a href="{{url('/#about')}}" class="header__link">Продать</a>
 {{--                <a href="{{url('/#catalog')}}" class="header__link">Новостройки</a>--}}
                 <a href="{{url('/#works')}}" class="header__link">Коммерческая недвижимость</a>
-                <a href="{{url('/contacts')}}" class="header__link">Юридические услуги</a>
+                <a href="{{url('/yuridicheskie-uslugi')}}" class="header__link">Юридические услуги</a>
             </nav>
             <div class="header__social">
 
@@ -227,6 +228,16 @@
         adaptiveHeight: true,
         autoplay: true,
         pauseOnFocus: false,
+
+    });
+    $('.clients__slider').slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        pauseOnFocus: false,
+        arrows: true,
 
     });
 </script>
