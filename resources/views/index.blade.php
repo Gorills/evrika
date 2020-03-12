@@ -15,7 +15,7 @@
 
 
 <div class="slick">
-
+    <?php $type = 'Заявка с главной страницы сайта'; ?>
 
 
     @foreach($stocks as $stock)
@@ -49,35 +49,35 @@
 <section class="uslugi">
     <div class="container">
         <div class="uslugi__inner">
-            <a href="#" class="uslugi__item item-one">
+            <a href="{{url('/yuridicheskie-uslugi')}}" class="uslugi__item item-one">
                 <img src="{{ asset('images/uslugi/urist.jpg') }}" alt="" class="uslugi__img">
                 <h4 class="uslugi__title">Юридические услуги</h4>
-                <p class="uslugi__info">Надпись</p>
+{{--                <p class="uslugi__info">Надпись</p>--}}
             </a>
             <a href="#" class="uslugi__item item-two">
-                <img src="{{ asset('images/uslugi/slide-1.jpg') }}" alt="" class="uslugi__img">
+                <img src="{{ asset('images/uslugi/pokupka.jpg') }}" alt="" class="uslugi__img">
                 <h4 class="uslugi__title">Покупка</h4>
-                <p class="uslugi__info">Надпись</p>
+{{--                <p class="uslugi__info">Надпись</p>--}}
             </a>
             <a href="#" class="uslugi__item item-three">
-                <img src="{{ asset('images/uslugi/slide-1.jpg') }}" alt="" class="uslugi__img">
+                <img src="{{ asset('images/uslugi/prodazha.jpg') }}" alt="" class="uslugi__img">
                 <h4 class="uslugi__title">Продажа</h4>
-                <p class="uslugi__info">Надпись</p>
+{{--                <p class="uslugi__info">Надпись</p>--}}
             </a>
             <a href="#" class="uslugi__item item-for">
-                <img src="{{ asset('images/uslugi/slide-1.jpg') }}" alt="" class="uslugi__img">
+                <img src="{{ asset('images/uslugi/novostroiki.jpg') }}" alt="" class="uslugi__img">
                 <h4 class="uslugi__title">Новостройки</h4>
-                <p class="uslugi__info">Надпись</p>
+{{--                <p class="uslugi__info">Надпись</p>--}}
             </a>
-            <a href="#" class="uslugi__item item-five">
-                <img src="{{ asset('images/uslugi/slide-1.jpg') }}" alt="" class="uslugi__img">
+            <a href="{{ url('/ipoteka') }}" class="uslugi__item item-five">
+                <img src="{{ asset('images/uslugi/ipoteka.jpg') }}" alt="" class="uslugi__img">
                 <h4 class="uslugi__title">Ипотека</h4>
-                <p class="uslugi__info">Надпись</p>
+{{--                <p class="uslugi__info">Надпись</p>--}}
             </a>
             <a href="#" class="uslugi__item item-six">
                 <img src="{{ asset('images/uslugi/kommerce.jpg') }}" alt="" class="uslugi__img">
                 <h4 class="uslugi__title">Коммерческая недвижимость</h4>
-                <p class="uslugi__info">Надпись</p>
+{{--                <p class="uslugi__info">Надпись</p>--}}
             </a>
 
 
@@ -119,10 +119,11 @@
                 <p>На какой номер позвонить?</p>
                 <form class="callback__form" action="#">
                     <input class="callback__input" type="tel" required placeholder="+7 ___ ___ ___">
+                    <input name="type" type="hidden" value="{{ $type }}">
                     <button type="submit" class="callback__btn btn btn__accent effect2">Позвоните мне!</button>
 
                 </form>
-                <p class="callback__personal">Отправляя заявку, вы соглашаетесь на обработку ваших <a href="#">персональных данных</a></p>
+                <p class="callback__personal">Отправляя заявку, вы соглашаетесь на обработку ваших <a href="{{ url('/personal') }}">персональных данных</a></p>
             </div>
 
 

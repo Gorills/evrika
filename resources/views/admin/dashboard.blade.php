@@ -90,12 +90,7 @@
         </tr>
         </tfoot>
     </table>
-
-
-
-
-
-    <h2 class="text-center mb-5">Отывы</h2>
+    <h2 class="text-center mb-5">Отзывы</h2>
     <table class="table table-striped mb-5">
         <thead>
         <tr>
@@ -139,8 +134,5 @@
         </tr>
         </tfoot>
     </table>
-
-
-
 </div>
 @endsection

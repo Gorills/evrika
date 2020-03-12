@@ -48,16 +48,17 @@
 
             <form class="form" action="">
                 <label>Имя</label>
-                <input class="form__input" type="text" name="name" id="">
+                <input  class="form__input" type="text" name="name" id="">
 
                 <label>Телефон</label>
-                <input class="form__input" type="tel" name="tel" id="">
+                <input class="form__input" type="tel" name="tel" id="" placeholder="+7 ___ ___ ___">
 
                 <label>Сообщение</label>
                 <textarea class="form__input" type="text" rows="7" name="msg" id=""></textarea>
 
                 <button type="submit" class="btn btn__accent">Отправить</button>
 
+                <input name="type" type="hidden" value="{{ $type }}">
             </form>
 
         </div>
@@ -75,6 +76,7 @@
                 <a href="{{url('/')}}" class="header__link link-none">Главная</a>
                 <a href="{{url('/')}}" class="header__link">Купить</a>
                 <a href="{{url('/#about')}}" class="header__link">Продать</a>
+                <a href="{{url('/ipoteka')}}" class="header__link">Ипотека</a>
 {{--                <a href="{{url('/#catalog')}}" class="header__link">Новостройки</a>--}}
                 <a href="{{url('/#works')}}" class="header__link">Коммерческая недвижимость</a>
                 <a href="{{url('/yuridicheskie-uslugi')}}" class="header__link">Юридические услуги</a>
@@ -207,14 +209,14 @@
     });
 
     // Активная ссылка для header в зависимости от url
-    // jQuery(document).ready(function($) {
-    //     var url=document.location.href;
-    //     $.each($(".header__nav a"),function(){
-    //         if(this.href==url){
-    //             $(this).addClass('header__link_active');
-    //         }
-    //     });
-    // })(jQuery);
+    jQuery(document).ready(function($) {
+        var url=document.location.href;
+        $.each($(".header__link"),function(){
+            if(this.href==url){
+                $(this).addClass('header__link_active');
+            }
+        });
+    })(jQuery);
 
 
 </script>
@@ -231,6 +233,8 @@
         pauseOnHover: false,
         pauseOnDotsHover: false,
         dots: true,
+        prevArrow: "<i class=\"fas fa-angle-left prev\"></i>",
+        nextArrow: "<i class=\"fas fa-angle-right next\"></i>",
 
     });
     $('.clients__slider').slick({
@@ -244,7 +248,7 @@
 
     });
 
-   
+
 </script>
 </body>
 </html>

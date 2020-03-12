@@ -12,7 +12,12 @@
 @section('twitter:title', $stock->meta_title . '| Роснедвижимость')
 
 @section('content')
+    @component('components.breadcrumbs')
+        @slot('parent') Главная @endslot
+        @slot('active') {{ $stock->title }} @endslot
+    @endcomponent
 
+    <?php $type = $stock->title ?>
 
     <section class="posadochnaya">
         <div class="container">

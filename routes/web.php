@@ -35,7 +35,9 @@ Route::get('/works', 'WorksController@index')->name('works');
 Route::get('/yuridicheskie-uslugi', function () {
     return view('yuridicheskie-uslugi');
 });
-
+Route::get('/ipoteka', function () {
+    return view('ipoteka');
+});
 
 Route::get('/contacts', function () {
     return view('contacts');

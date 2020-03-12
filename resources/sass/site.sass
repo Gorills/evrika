@@ -207,7 +207,7 @@ h1, h2, h3, h4, h5, h6, p
         margin-top: 20px
     // popup_active
     &_active
-        z-index: 3
+        z-index: 10
         opacity: 1
 
 
@@ -279,7 +279,8 @@ h1, h2, h3, h4, h5, h6, p
     &__link
         text-decoration: none
         color: #ffffff
-        font-size: 15px
+        font-size: 14px
+        text-transform: uppercase
         letter-spacing: 0.45px
         font-weight: 500
         position: relative
@@ -290,10 +291,14 @@ h1, h2, h3, h4, h5, h6, p
             height: 3px
             background-color: $color-hover
             left: 0
-            top: 30px
+            top: 28px
             transition: $transition
         &:hover::after
             width: 100%
+        // .header__link_active
+        &_active::after
+            width: 100%
+
     &__link + &__link
         margin-right: 25px
         transition: $transition
@@ -332,12 +337,9 @@ h1, h2, h3, h4, h5, h6, p
         transition: $transition
         i
             padding-top: 2px
-            display: none
             font-size: 20px
-        &:hover
-            background: none
-            i
-                display: block
+        &:hover i
+            color: $color-gray
 
 
 
@@ -363,7 +365,7 @@ h1, h2, h3, h4, h5, h6, p
             align-items: center
             border: none
         .header__link::after
-            top: 43px
+            top: 41px
         .header-bottom
             top: 66px !important
         .header__social
@@ -371,13 +373,13 @@ h1, h2, h3, h4, h5, h6, p
         .header__social-item
             align-items: center
 
-.social-icon-one
-    background-color: $color-hover-alter1
-
-.social-icon-two
-    background-color: $color-hover-alter2
-.social-icon-three
-    background-color: $color-hover-alter3
+//.social-icon-one
+//    background-color: $color-hover-alter1
+//
+//.social-icon-two
+//    background-color: $color-hover-alter2
+//.social-icon-three
+//    background-color: $color-hover-alter3
 // header-bottom
 .header-bottom
     background-color: rgba(255, 255, 255, 1)
@@ -416,7 +418,7 @@ h1, h2, h3, h4, h5, h6, p
     .link-none
         display: block
     .header__link::after
-        top: 43px
+        top: 42px
     .header-bottom
         top: 68px !important
     .header__social
@@ -795,30 +797,244 @@ h1, h2, h3, h4, h5, h6, p
             color: #fff
 
 .posadochnaya
-    height: 300vh
-
-
-
-
-.slider-test
     width: 100%
     margin: 0 auto
-    padding: 15px
+    padding: 80px 0
+    // .posadochnaya__inner
+    &__inner
+        width: 100%
+        margin: 0 auto
+    // .posadochnaya__title
+    &__title
+        text-align: center
+        font-size: 28px
 
-.slick-prev
-    position: absolute
-    z-index: 5
-    left: 15px
-    top: 50%
-.slick-next
-    position: absolute
-    z-index: 5
-    right: 15px
-    top: 50%
+
+// breadcrambs
+.breadcrumbs
+
+    // .breadcrumbs__inner
+    &__inner
+        list-style: none
+    // .breadcrumbs__item
+    &__item
+        display: inline-block
+        font-size: 11px
+        a
+            text-decoration: none
+            color: #333
+            font-weight: 700
+            transition: $transition
+            &:hover
+                color: $color-gray
+
+    &__item + &__item
+        margin-left: 5px
+
+// slick slider
+
+//.slick-prev
+//    position: absolute
+//    z-index: 5
+//    left: 15px
+//    top: 50%
+//.slick-next
+//    position: absolute
+//    z-index: 5
+//    right: 15px
+//    top: 50%
 
 .slick-dots
     position: absolute
     bottom: 15px
+.prev,
+.next
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    height: 30px
+    width: 30px
+    font-size: 30px
+    color: $accent-hover
+    z-index: 1
+    cursor: pointer
+.prev
+    left: 15px
+    rotation: 180deg
+.next
+    right: 15px
+
+.ipoteka
+    width: 100%
+    margin: 0 auto
+    position: relative
+    overflow: hidden
+    padding: 100px
+    object-fit: cover
+    background-color: #fff
+
+    // .ipoteka__img
+    &__img
+        opacity: 40%
+        z-index: 0
+        position: absolute
+        top: 60%
+        left: 50%
+        width: 100%
+        transform: translate(-50%, -60%)
+    // .ipoteka__inner
+    &__inner
+        z-index: 9
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 80px
+    // .ipoteka__left
+    &__left
+        z-index: 9
+    // .ipoteka__title
+    &__title
+        font-size: 48px
+        margin-bottom: 60px
+        line-height: 1.1
+    // .ipoteka__text
+    &__text
+        font-size: 36px
+        line-height: 1.2
+        // .ipoteka__text_accent
+        &_accent
+            background-color: $color-hover
+            padding: 3px 6px
+            color: #fff
+            font-weight: 700
+    // .ipoteka__right
+    &__right
+        z-index: 9
+        // .ipoteka__right_title
+        &_title
+            font-size: 36px
+        // .ipoteka__right_text
+        &_text
+            font-size: 18px
+            margin-bottom: 40px
+            font-weight: 300
+
+    // .ipoteka__form
+    &__form
+        display: flex
+        flex-direction: column
+
+    // .ipoteka__input
+    &__input
+        width: 100%
+        padding: 10px 15px
+        font-size: 18px
+
+    &__input + &__input
+        margin-top: 20px
+    // .ipoteka__btn-block
+    &__btn-block
+        margin-top: 20px
+        width: 100%
+        display: flex
+        justify-content: space-around
+        align-items: center
+    // .ipoteka__btn
+    &__btn
+        border: none
+        margin: 0 auto
+        font-weight: 700 !important
+        font-size: 16px !important
+        cursor: pointer
+    // .ipoteka__min-text
+    &__min-text
+        font-size: 11px
+        margin-left: 15px
+    // .ipoteka__link
+    &__link
+        color: #333
+
+.urist
+    width: 100%
+    margin: 0 auto
+    padding: 40px 0
+    // .urist__inner
+    &__inner
+        width: 100%
+        margin: 0 auto
+    // .urist__title
+    &__title
+        text-align: center
+        margin-bottom: 60px
+    // .urist__grid
+    &__grid
+        display: grid
+        grid-template-columns: 1fr
+        grid-gap: 40px
+    // .urist__item
+    &__item
+        padding: 25px
+        border: $border
+    // .urist__item-column
+    &__item-column
+        width: 100%
+        display: grid
+        grid-template-columns: 3fr 4fr
+        grid-gap: 20px
+        align-items: center
+        justify-content: space-around
+        margin-bottom: 40px
+    // .urist__item-left
+    &__item-left
+        text-align: center
+        margin-right: 20px
+    // .urist__item-icon
+    &__item-icon
+        font-size: 150px
+    // .urist__item-right
+    &__item-right
+        width: 100%
+        //max-width: 250px
+    // .urist__item-title
+    &__item-title
+        text-align: center
+        margin-bottom: 40px
+    // .urist__item-span
+    &__item-span
+        font-weight: 400
+    // .urist__list
+    &__list
+        padding: 0
+        margin: 0
+        list-style: none
+
+    // .urist__list-item
+    &__list-item
+        position: relative
+        &::after
+            position: absolute
+            content: ""
+            height: 1px
+            width: 10px
+            background-color: #333
+
+            left: -30px
+            top: 50%
+    &__list-item + &__list-item
+        margin-top: 10px
+    // .urist__item-btn-wrapper
+    &__item-btn-wrapper
+        width: 100%
+        display: flex
+        justify-content: center
+
+    // .urist__item-btn
+    &__item-btn
+        margin: 0 auto
+        text-align: center
+
+
+
+
 
 
 // footer
