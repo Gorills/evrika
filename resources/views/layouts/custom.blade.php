@@ -74,10 +74,9 @@
 {{--            </a>--}}
             <nav class="header__nav">
                 <a href="{{url('/')}}" class="header__link link-none">Главная</a>
-                <a href="{{url('/')}}" class="header__link">Купить</a>
-                <a href="{{url('/#about')}}" class="header__link">Продать</a>
+                <a href="{{url('/kupit')}}" class="header__link">Купить</a>
+                <a href="{{url('/prodat')}}" class="header__link">Продать</a>
                 <a href="{{url('/ipoteka')}}" class="header__link">Ипотека</a>
-{{--                <a href="{{url('/#catalog')}}" class="header__link">Новостройки</a>--}}
                 <a href="{{url('/#works')}}" class="header__link">Коммерческая недвижимость</a>
                 <a href="{{url('/yuridicheskie-uslugi')}}" class="header__link">Юридические услуги</a>
             </nav>
@@ -160,6 +159,7 @@
         e.preventDefault();
         $(this).toggleClass('menu-btn_active');
         $(".header-bottom").toggleClass('header-bottom_active');
+        $(".header").toggleClass('header-mobile-active');
 
     })
     // $(".header__link").click(function(e) {
@@ -185,7 +185,6 @@
         $(".popup").removeClass('popup_active');
 
     })
-
 
 
 

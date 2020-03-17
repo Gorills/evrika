@@ -4,20 +4,225 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 /**/
-
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-/**/
+    // Header
+    .header
+        position: fixed
+        top: 0
+        left: -100%
+        right: 0
+        bottom: 0
+        background-color: #333
+        z-index: 10
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: $transition
+        // header__inner
+        &__inner
+            display: block
+            border-bottom: none
+            text-align: center
+        //  header__logo-link
+        &__logo-link
+            display: block
+        // header__logo
+        &__logo
+            height: 60px
+        // header__nav
+        &__nav
+            flex-direction: column
+            justify-content: center
+            margin-bottom: 20px
+        // header__link
+        &__link
+            text-decoration: none
+            color: #ffffff
+            font-size: 14px
+            text-transform: uppercase
+            letter-spacing: 0.45px
+            font-weight: 500
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                width: 0
+                height: 3px
+                background-color: $color-hover
+                left: 0
+                top: 28px
+                transition: $transition
+            &:hover::after
+                width: 100%
+            // .header__link_active
+            &_active::after
+                width: 100%
+
+        &__link + &__link
+            margin-right: 0
+            margin-bottom: 15px
+
+            transition: $transition
+        // header__social
+        &__social
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            .toggle-menu
+                position: fixed
+                top: 15px
+                right: 15px
+                background-color: rgba(51, 51, 51, 0.6)
+        // header__callback
+        &__callback
+            display: none
+        // header__social-item
+        &__social-item
+            display: flex
+            align-items: center
+        &__social-item + &__social-item
+            margin-left: 15px
+        // header__social-icon
+        &__social-icon + &__social-icon
+            margin-left: 35px
+
+    .header-bottom
+        display: none !important
+
+
+    .header-mobile-active
+        left: 0
+
+    // .uslugi__inner
+    .uslugi__inner
+        grid-template-columns: repeat(3, 1fr)
+
+    .item-one
+        grid-column: 1 / 2
+        img
+            width: 100%
+            height: 100%
+
+    .item-six
+        grid-column: 3 / 4
+        img
+            width: 100%
+            height: 100%
+
+
+    // .callback__inner
+
+    .callback__title
+        font-size: 32px
+
+
+    .clients__inner
+        flex-direction: column
+
+    .clients__left
+        margin-bottom: 40px
+        max-width: 100%
+        text-align: center
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 
-/**/
+    // .uslugi__inner
+    .uslugi__inner
+        grid-template-columns: repeat(2, 1fr)
+    .item-one
+        grid-column: auto
+        img
+            width: 100%
+            height: 100%
+    .item-two
+        img
+            height: 100%
+            width: 100%
+    .item-three
+        img
+            height: 100%
+            width: 100%
+    .item-for
+        img
+            height: 100%
+            width: 100%
+    .item-five
+        img
+            height: 100%
+            width: 100%
+    .item-six
+        grid-column: auto
+        img
+            width: 100%
+            height: 100%
+
+
+    // .callback__inner
+    .callback__inner
+        flex-direction: column
+        justify-content: center
+        text-align: center
+
+    .callback__left
+        max-width: 100%
+        margin-bottom: 20px
+
+
+    // .callback__middle
+    .callback__middle
+        display: flex
+        flex-direction: column
+        justify-content: center
+        text-align: center
+        width: 100%
+        margin-bottom: 20px
+
+
+    .callback__right
+        max-width: 100%
+
+    .callback-faq__item
+        text-align: center
+        justify-content: center
+
+    .about__inner
+        grid-template-columns: 1fr
+
+    .ipoteka__inner
+        grid-template-columns: 1fr
+
+
+    .footer__inner
+        flex-direction: column
+        justify-content: center
+
+    .footer__contacts
+        text-align: center
+        margin-bottom: 40px
+    .footer__nav
+        margin-bottom: 40px
+
+    .footer__submenu
+        text-align: center
+
+
+
+
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 
 
-/**/
+    // .uslugi__inner
+    .uslugi__inner
+        grid-template-columns: 1fr
+
+
+    .slider__title
+        font-size: 38px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

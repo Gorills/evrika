@@ -57,7 +57,22 @@
 
 
     <script>
-        $('.header').addClass('header-background')
+
+
+        $('.header').addClass('header-background');
+
+
+
+        $(window).resize(function () {
+            if($(window).width() <= 992){
+                $('.header').removeClass('header-background');
+            }
+
+            else{
+                $('.header').addClass('header-background');
+            };
+        });
+
     </script>
 
 @endsection
