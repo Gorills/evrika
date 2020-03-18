@@ -32,21 +32,17 @@
 
     <script>
 
+        // $('.header').addClass('header-background');
 
-        $('.header').addClass('header-background');
-
-
-
-        $(window).resize(function () {
-            if($(window).width() <= 992){
+        function windowSize(){
+            if ($(window).width() <= '992'){
                 $('.header').removeClass('header-background');
-            }
-
-            else{
+            } else {
                 $('.header').addClass('header-background');
-            };
-        });
+            }
+        }
 
+        $(window).on('load resize',windowSize);
     </script>
 
 @endsection

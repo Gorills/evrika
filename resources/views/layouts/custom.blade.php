@@ -77,7 +77,7 @@
                 <a href="{{url('/kupit')}}" class="header__link">Купить</a>
                 <a href="{{url('/prodat')}}" class="header__link">Продать</a>
                 <a href="{{url('/ipoteka')}}" class="header__link">Ипотека</a>
-                <a href="{{url('/#works')}}" class="header__link">Коммерческая недвижимость</a>
+                <a href="{{url('/kommercheskaya-nedvizhimost')}}" class="header__link">Коммерческая недвижимость</a>
                 <a href="{{url('/yuridicheskie-uslugi')}}" class="header__link">Юридические услуги</a>
             </nav>
             <div class="header__social">
@@ -126,24 +126,23 @@
         <div class="footer__inner">
             <div class="footer__contacts">
                 <p class="footer__title">Контакты</p>
-                <a href="#" class="footer__links"><i class="footer__icon fas fa-map-marker-alt"></i> г.Томск, ул. Усова ..., офис 205</a>
-                <a href="#" class="footer__links"><i class="footer__icon fas fa-phone"></i> 8952598965</a>
-                <a href="#" class="footer__links"><i class="footer__icon fas fa-envelope"></i> mail@mail.com</a>
+                <a href="{{ url('/map') }}" class="footer__links"><i class="footer__icon fas fa-map-marker-alt"></i> г.Томск, пл. Батенькова 2, офис ...</a>
+                <a href="{{ url('/map') }}" class="footer__links"><i class="footer__icon fas fa-phone"></i> 8952598965</a>
+                <a href="{{ url('/map') }}" class="footer__links"><i class="footer__icon fas fa-envelope"></i> mail@mail.com</a>
             </div>
             <nav class="footer__nav">
                 <p class="footer__title">Меню</p>
-                <a class="footer__links" href="#">Главная</a>
-                <a class="footer__links" href="#">О компании</a>
-                <a class="footer__links" href="#">Каталог</a>
-                <a class="footer__links" href="#">Наши работы</a>
-                <a class="footer__links" href="#">Контакты</a>
+                <a class="footer__links" href="{{ url('/map') }}">Главная</a>
+                <a class="footer__links" href="{{ url('/map') }}">Продать недвижимость</a>
+                <a class="footer__links" href="{{ url('/map') }}">Купить недвижимость </a>
+                <a class="footer__links" href="{{ url('/map') }}">О нас </a>
+
             </nav>
             <div class="footer__submenu">
                 <p class="footer__title">Услуги</p>
-                <a class="footer__links" href="#">Кондиционеры</a>
-                <a class="footer__links" href="#">Вентиляция</a>
-                <a class="footer__links" href="#">Тепловое оборудование</a>
-                <a class="footer__links" href="#">Климатические системы</a>
+                <a class="footer__links" href="{{ url('/map') }}">Юридические услуги</a>
+                <a class="footer__links" href="{{ url('/map') }}">Ипотека</a>
+
 
 
             </div>
@@ -216,6 +215,12 @@
             }
         });
     })(jQuery);
+
+
+
+
+
+
 
 
 </script>

@@ -221,34 +221,15 @@
 
 
     <script>
-
-
-        // $('.header').addClass('header-background');
-        var width = $('body').innerWidth();
-        $(window).resize(function () {
-            if (width < 992) {
-                $('.header').removeClass('header-background')
-
+        function windowSize(){
+            if ($(window).width() <= '992'){
+                $('.header').removeClass('header-background');
             } else {
-
-                ('.header').addClass('header-background');
+                $('.header').addClass('header-background');
             }
-        });
+        }
 
-
-
-
-
-        // $(window).resize(function () {
-        //     if($(window).width() <= 992){
-        //         $('.header').removeClass('header-background');
-        //     }
-        //
-        //     else{
-        //         $('.header').addClass('header-background');
-        //     };
-        // });
-
+        $(window).on('load resize',windowSize);
     </script>
 
 @endsection

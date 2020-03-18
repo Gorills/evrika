@@ -1035,6 +1035,8 @@ p {
 
 .ipoteka__left {
   z-index: 9;
+  display: flex;
+  align-items: center;
 }
 
 .ipoteka__title {
@@ -1208,7 +1210,7 @@ p {
   width: 100%;
   margin: 0 auto;
   background-color: #f6f6f6;
-  padding: 60px 0;
+  padding: 40px 0;
   color: #333;
   font-weight: 700;
 }
@@ -1221,6 +1223,10 @@ p {
 
 .footer__contacts {
   width: 100%;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .footer__icon {
@@ -1228,25 +1234,38 @@ p {
 }
 
 .footer__title {
-  font-size: 22px;
+  font-size: 17px;
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 .footer__nav {
+  max-width: 250px;
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .footer__submenu {
+  max-width: 250px;
   width: 100%;
   text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .footer__links {
   display: block;
   text-decoration: none;
   color: #333333;
+  font-size: 14px;
   transition: all 0.5s ease;
+  font-weight: 300;
+  width: 100%;
+  max-width: 245px;
 }
 
 .footer__links:hover {

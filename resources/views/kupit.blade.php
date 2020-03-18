@@ -15,10 +15,10 @@
 
     @component('components.breadcrumbs')
         @slot('parent') Главная @endslot
-        @slot('active') Ипотека @endslot
+        @slot('active') Покупка @endslot
     @endcomponent
 
-    <?php $type = 'Заявка по ипотеке'; ?>
+    <?php $type = 'Заявка по покупке'; ?>
 
     <section class="ipoteka">
 

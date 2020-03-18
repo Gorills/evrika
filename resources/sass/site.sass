@@ -891,6 +891,8 @@ h1, h2, h3, h4, h5, h6, p
     // .ipoteka__left
     &__left
         z-index: 9
+        display: flex
+        align-items: center
     // .ipoteka__title
     &__title
         font-size: 48px
@@ -1043,7 +1045,7 @@ h1, h2, h3, h4, h5, h6, p
     width: 100%
     margin: 0 auto
     background-color: $background-color-light
-    padding: 60px 0
+    padding: 40px 0
     color: #333
     font-weight: 700
     // footer__inner
@@ -1054,29 +1056,47 @@ h1, h2, h3, h4, h5, h6, p
     // footer__contacts
     &__contacts
         width: 100%
+        max-width: 250px
+        display: flex
+        flex-direction: column
+        justify-content: center
     // footer__icon
     &__icon
         margin-right: 10px
     // footer__title
     &__title
-        font-size: 22px
+        font-size: 17px
         margin-bottom: 30px
+        text-transform: uppercase
 
     // footer__nav
     &__nav
+        max-width: 250px
+
         width: 100%
         text-align: center
+        display: flex
+        flex-direction: column
+        justify-content: center
     // footer__submenu
     &__submenu
+        max-width: 250px
+
         width: 100%
         text-align: end
-
+        display: flex
+        flex-direction: column
+        justify-content: center
     // footer__links
     &__links
         display: block
         text-decoration: none
         color: #333333
+        font-size: 14px
         transition: $transition
+        font-weight: 300
+        width: 100%
+        max-width: 245px
         &:hover
             color: $color-hover
 
