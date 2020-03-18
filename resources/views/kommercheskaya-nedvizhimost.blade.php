@@ -37,7 +37,7 @@
                         <input name="type" type="hidden" value="{{ $type }}">
                         <div class="ipoteka__btn-block">
                             <button class="ipoteka__btn btn btn__accent">Отправить</button>
-                            <p class="ipoteka__min-text">Отправляя заявку, вы соглашаетесь на обработку ваших <a href="{{ url('/personal') }}" class="ipoteka__link">персональных данных</a>.</p>
+                            <p class="ipoteka__min-text">Отправляя заявку, вы соглашаетесь на обработку ваших <a href="{{ url('/soglashenie') }}" class="ipoteka__link">персональных данных</a>.</p>
                         </div>
                     </form>
                 </div>

@@ -54,17 +54,17 @@
                 <h4 class="uslugi__title">Юридические услуги</h4>
 {{--                <p class="uslugi__info">Надпись</p>--}}
             </a>
-            <a href="#" class="uslugi__item item-two">
+            <a href="{{ url('/kupit') }}" class="uslugi__item item-two">
                 <img src="{{ asset('images/uslugi/pokupka.jpg') }}" alt="" class="uslugi__img">
                 <h4 class="uslugi__title">Покупка</h4>
 {{--                <p class="uslugi__info">Надпись</p>--}}
             </a>
-            <a href="#" class="uslugi__item item-three">
+            <a href="{{ url('/prodat') }}" class="uslugi__item item-three">
                 <img src="{{ asset('images/uslugi/prodazha.jpg') }}" alt="" class="uslugi__img">
                 <h4 class="uslugi__title">Продажа</h4>
 {{--                <p class="uslugi__info">Надпись</p>--}}
             </a>
-            <a href="#" class="uslugi__item item-for">
+            <a href="{{ url('novostroyky') }}" class="uslugi__item item-for">
                 <img src="{{ asset('images/uslugi/novostroiki.jpg') }}" alt="" class="uslugi__img">
                 <h4 class="uslugi__title">Новостройки</h4>
 {{--                <p class="uslugi__info">Надпись</p>--}}
@@ -74,7 +74,7 @@
                 <h4 class="uslugi__title">Ипотека</h4>
 {{--                <p class="uslugi__info">Надпись</p>--}}
             </a>
-            <a href="#" class="uslugi__item item-six">
+            <a href="{{ url('/kommercheskaya-nedvizhimost') }}" class="uslugi__item item-six">
                 <img src="{{ asset('images/uslugi/kommerce.jpg') }}" alt="" class="uslugi__img">
                 <h4 class="uslugi__title">Коммерческая недвижимость</h4>
 {{--                <p class="uslugi__info">Надпись</p>--}}
@@ -148,13 +148,13 @@
                     <input name="type" type="hidden" value="{{ $type }}">
                     <div class="ipoteka__btn-block">
                         <button class="ipoteka__btn btn btn__accent">Отправить</button>
-                        <p class="ipoteka__min-text">Отправляя заявку, вы соглашаетесь на обработку ваших <a href="{{ url('/personal') }}" class="ipoteka__link">персональных данных</a>.</p>
+                        <p class="ipoteka__min-text">Отправляя заявку, вы соглашаетесь на обработку ваших <a href="{{ url('/soglashenie') }}" class="ipoteka__link">персональных данных</a>.</p>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    <img class="ipoteka__img" src="{{ asset('images/poteka-background.jpg') }}" alt="">
+    <img class="ipoteka__img" src="{{ asset('images/ipoteka-start.jpg') }}" alt="">
 </section>
 
 

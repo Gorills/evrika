@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/stock/{slug}', 'ShopController@getUrl')->name('stock');
+Route::get('/stock/{slug}', 'ShopController@stock')->name('stock');
 
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware' => ['auth']], function (){
     Route::get('/', 'DashboardController@dashboard')->name('admin.dashboard');

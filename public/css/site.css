@@ -1036,6 +1036,7 @@ p {
 .ipoteka__left {
   z-index: 9;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
