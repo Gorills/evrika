@@ -18,5 +18,5 @@ mix.sass('resources/sass/site.sass', 'public/css');
 
 
 mix.browserSync({
-    proxy: 'evrika'
+    proxy: 'http://127.0.0.1:8000/'
 });

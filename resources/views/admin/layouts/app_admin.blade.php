@@ -43,7 +43,7 @@
                         <a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard</a>
                         <a class="dropdown-item" href="{{ route('admin.stock.index') }}">Акции</a>
                         <a class="dropdown-item" href="{{ route('admin.event.index') }}">Новости</a>
-                        <a class="dropdown-item" href="{{ route('admin.work.index') }}">Работы</a>
+                        <a class="dropdown-item" href="{{ route('admin.work.index') }}">Отзывы</a>
 
 
                     </div>

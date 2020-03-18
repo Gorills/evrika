@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/stock/{slug}', 'ShopController@stock')->name('stock');
+Route::get('/stock/{slug}', 'ShopController@getUrl')->name('stock');
 
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware' => ['auth']], function (){
     Route::get('/', 'DashboardController@dashboard')->name('admin.dashboard');
@@ -35,6 +35,30 @@ Route::get('/works', 'WorksController@index')->name('works');
 Route::get('/yuridicheskie-uslugi', function () {
     return view('yuridicheskie-uslugi');
 });
+Route::get('/ipoteka', function () {
+    return view('ipoteka');
+});
+Route::get('/kupit', function () {
+    return view('kupit');
+});
+Route::get('/prodat', function () {
+    return view('prodat');
+});
+Route::get('/kommercheskaya-nedvizhimost', function () {
+    return view('kommercheskaya-nedvizhimost');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/map', function () {
+    return view('map');
+});
+Route::get('/soglashenie', function () {
+    return view('soglashenie');
+});
+
 
 
 Route::get('/contacts', function () {

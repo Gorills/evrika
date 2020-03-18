@@ -48,16 +48,17 @@
 
             <form class="form" action="">
                 <label>Имя</label>
-                <input class="form__input" type="text" name="name" id="">
+                <input  class="form__input" type="text" name="name" id="">
 
                 <label>Телефон</label>
-                <input class="form__input" type="tel" name="tel" id="">
+                <input class="form__input" type="tel" name="tel" id="" placeholder="+7 ___ ___ ___">
 
                 <label>Сообщение</label>
                 <textarea class="form__input" type="text" rows="7" name="msg" id=""></textarea>
 
                 <button type="submit" class="btn btn__accent">Отправить</button>
 
+                <input name="type" type="hidden" value="{{ $type }}">
             </form>
 
         </div>
@@ -73,10 +74,10 @@
 {{--            </a>--}}
             <nav class="header__nav">
                 <a href="{{url('/')}}" class="header__link link-none">Главная</a>
-                <a href="{{url('/')}}" class="header__link">Купить</a>
-                <a href="{{url('/#about')}}" class="header__link">Продать</a>
-{{--                <a href="{{url('/#catalog')}}" class="header__link">Новостройки</a>--}}
-                <a href="{{url('/#works')}}" class="header__link">Коммерческая недвижимость</a>
+                <a href="{{url('/kupit')}}" class="header__link">Купить</a>
+                <a href="{{url('/prodat')}}" class="header__link">Продать</a>
+                <a href="{{url('/ipoteka')}}" class="header__link">Ипотека</a>
+                <a href="{{url('/kommercheskaya-nedvizhimost')}}" class="header__link">Коммерческая недвижимость</a>
                 <a href="{{url('/yuridicheskie-uslugi')}}" class="header__link">Юридические услуги</a>
             </nav>
             <div class="header__social">
@@ -125,24 +126,23 @@
         <div class="footer__inner">
             <div class="footer__contacts">
                 <p class="footer__title">Контакты</p>
-                <a href="#" class="footer__links"><i class="footer__icon fas fa-map-marker-alt"></i> г.Томск, ул. Усова ..., офис 205</a>
-                <a href="#" class="footer__links"><i class="footer__icon fas fa-phone"></i> 8952598965</a>
-                <a href="#" class="footer__links"><i class="footer__icon fas fa-envelope"></i> mail@mail.com</a>
+                <a href="{{ url('/map') }}" class="footer__links"><i class="footer__icon fas fa-map-marker-alt"></i> г.Томск, пл. Батенькова 2, офис ...</a>
+                <a href="{{ url('/map') }}" class="footer__links"><i class="footer__icon fas fa-phone"></i> 8952598965</a>
+                <a href="{{ url('/map') }}" class="footer__links"><i class="footer__icon fas fa-envelope"></i> mail@mail.com</a>
             </div>
             <nav class="footer__nav">
                 <p class="footer__title">Меню</p>
-                <a class="footer__links" href="#">Главная</a>
-                <a class="footer__links" href="#">О компании</a>
-                <a class="footer__links" href="#">Каталог</a>
-                <a class="footer__links" href="#">Наши работы</a>
-                <a class="footer__links" href="#">Контакты</a>
+                <a class="footer__links" href="{{ url('/map') }}">Главная</a>
+                <a class="footer__links" href="{{ url('/map') }}">Продать недвижимость</a>
+                <a class="footer__links" href="{{ url('/map') }}">Купить недвижимость </a>
+                <a class="footer__links" href="{{ url('/map') }}">О нас </a>
+
             </nav>
             <div class="footer__submenu">
                 <p class="footer__title">Услуги</p>
-                <a class="footer__links" href="#">Кондиционеры</a>
-                <a class="footer__links" href="#">Вентиляция</a>
-                <a class="footer__links" href="#">Тепловое оборудование</a>
-                <a class="footer__links" href="#">Климатические системы</a>
+                <a class="footer__links" href="{{ url('/map') }}">Юридические услуги</a>
+                <a class="footer__links" href="{{ url('/map') }}">Ипотека</a>
+
 
 
             </div>
@@ -158,6 +158,7 @@
         e.preventDefault();
         $(this).toggleClass('menu-btn_active');
         $(".header-bottom").toggleClass('header-bottom_active');
+        $(".header").toggleClass('header-mobile-active');
 
     })
     // $(".header__link").click(function(e) {
@@ -188,7 +189,6 @@
 
 
 
-
     $(window).scroll(function() {
         var height = $(window).scrollTop();
         /*Если сделали скролл на 100px задаём новый класс для header*/
@@ -207,14 +207,20 @@
     });
 
     // Активная ссылка для header в зависимости от url
-    // jQuery(document).ready(function($) {
-    //     var url=document.location.href;
-    //     $.each($(".header__nav a"),function(){
-    //         if(this.href==url){
-    //             $(this).addClass('header__link_active');
-    //         }
-    //     });
-    // })(jQuery);
+    jQuery(document).ready(function($) {
+        var url=document.location.href;
+        $.each($(".header__link"),function(){
+            if(this.href==url){
+                $(this).addClass('header__link_active');
+            }
+        });
+    })(jQuery);
+
+
+
+
+
+
 
 
 </script>
@@ -231,6 +237,8 @@
         pauseOnHover: false,
         pauseOnDotsHover: false,
         dots: true,
+        prevArrow: "<i class=\"fas fa-angle-left prev\"></i>",
+        nextArrow: "<i class=\"fas fa-angle-right next\"></i>",
 
     });
     $('.clients__slider').slick({
@@ -244,7 +252,7 @@
 
     });
 
-   
+
 </script>
 </body>
 </html>

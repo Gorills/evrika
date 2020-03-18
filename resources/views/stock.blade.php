@@ -12,7 +12,12 @@
 @section('twitter:title', $stock->meta_title . '| Роснедвижимость')
 
 @section('content')
+    @component('components.breadcrumbs')
+        @slot('parent') Главная @endslot
+        @slot('active') {{ $stock->title }} @endslot
+    @endcomponent
 
+    <?php $type = $stock->title ?>
 
     <section class="posadochnaya">
         <div class="container">
@@ -26,7 +31,18 @@
 
 
     <script>
-        $('.header').addClass('header-background')
+
+        // $('.header').addClass('header-background');
+
+        function windowSize(){
+            if ($(window).width() <= '992'){
+                $('.header').removeClass('header-background');
+            } else {
+                $('.header').addClass('header-background');
+            }
+        }
+
+        $(window).on('load resize',windowSize);
     </script>
 
 @endsection
