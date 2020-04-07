@@ -15,18 +15,10 @@
 
     @component('components.breadcrumbs')
         @slot('parent') Главная @endslot
-        @slot('active') О компании @endslot
+        @slot('active') Соглашение @endslot
     @endcomponent
 
     <?php $type = 'Заявка со страницы соглашения'; ?>
-
-
-
-
-
-
-
-
 
 
 

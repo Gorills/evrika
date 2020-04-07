@@ -310,7 +310,8 @@ h1, h2, h3, h4, h5, h6, p
     &__callback
         margin-right: 25px
         font-size: 13px
-        color: $color-gray
+        text-align: center
+        color: #ffffff
         text-decoration: none
         transition: $transition
         margin-bottom: -5px
@@ -414,6 +415,8 @@ h1, h2, h3, h4, h5, h6, p
         align-items: center
         border: none
     .header__link
+        color: #333
+    .header__callback
         color: #333
     .link-none
         display: block
@@ -866,7 +869,7 @@ h1, h2, h3, h4, h5, h6, p
     margin: 0 auto
     position: relative
     overflow: hidden
-    padding: 100px
+    padding: 100px 0
     object-fit: cover
     background-color: #fff
 
@@ -892,6 +895,7 @@ h1, h2, h3, h4, h5, h6, p
     &__left
         z-index: 9
         display: flex
+        flex-direction: column
         align-items: center
     // .ipoteka__title
     &__title
@@ -1052,10 +1056,11 @@ h1, h2, h3, h4, h5, h6, p
     &__inner
         display: flex
         justify-content: space-between
+        align-items: flex-start
         margin-bottom: 40px
     // footer__contacts
     &__contacts
-        width: 100%
+        //width: 100%
         max-width: 250px
         display: flex
         flex-direction: column
@@ -1073,7 +1078,7 @@ h1, h2, h3, h4, h5, h6, p
     &__nav
         max-width: 250px
 
-        width: 100%
+        //width: 100%
         text-align: center
         display: flex
         flex-direction: column
@@ -1082,7 +1087,7 @@ h1, h2, h3, h4, h5, h6, p
     &__submenu
         max-width: 250px
 
-        width: 100%
+        //width: 100%
         text-align: end
         display: flex
         flex-direction: column
