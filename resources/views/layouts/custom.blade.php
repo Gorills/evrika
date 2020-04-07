@@ -48,13 +48,13 @@
 
             <form class="form" action="">
                 <label>Имя</label>
-                <input  class="form__input" type="text" name="name" id="">
+                <input  class="form__input" type="text" name="name">
 
                 <label>Телефон</label>
-                <input class="form__input" type="tel" name="tel" id="" placeholder="+7 ___ ___ ___">
+                <input class="form__input" type="tel" name="tel" placeholder="+7 ___ ___ ___">
 
                 <label>Сообщение</label>
-                <textarea class="form__input" type="text" rows="7" name="msg" id=""></textarea>
+                <textarea class="form__input" type="text" rows="7" name="msg"></textarea>
 
                 <button type="submit" class="btn btn__accent">Отправить</button>
 
@@ -132,16 +132,17 @@
             </div>
             <nav class="footer__nav">
                 <p class="footer__title">Меню</p>
-                <a class="footer__links" href="{{ url('/map') }}">Главная</a>
-                <a class="footer__links" href="{{ url('/map') }}">Продать недвижимость</a>
-                <a class="footer__links" href="{{ url('/map') }}">Купить недвижимость </a>
+                <a class="footer__links" href="{{ url('/') }}">Главная</a>
+                <a class="footer__links" href="{{ url('/prodat') }}">Продать недвижимость</a>
+                <a class="footer__links" href="{{ url('/kupit') }}">Купить недвижимость </a>
+                <a class="footer__links" href="{{ url('/kommercheskaya-nedvizhimost') }}">Коммерческая недвижимость</a>
                 <a class="footer__links" href="{{ url('/map') }}">О нас </a>
 
             </nav>
             <div class="footer__submenu">
                 <p class="footer__title">Услуги</p>
                 <a class="footer__links" href="{{ url('/map') }}">Юридические услуги</a>
-                <a class="footer__links" href="{{ url('/map') }}">Ипотека</a>
+                <a class="footer__links" href="{{ url('/ipoteka') }}">Ипотека</a>
 
 
 
@@ -161,14 +162,20 @@
         $(".header").toggleClass('header-mobile-active');
 
     })
-    // $(".header__link").click(function(e) {
-    //     // e.preventDefault();
-    //     $(".menu-btn").removeClass("menu-btn_active");
-    //     $(".header").removeClass("header_active");
-    // })
-    //
-    //
+    $(".header__link").click(function(e) {
+        // e.preventDefault();
+        $(".menu-btn").removeClass("menu-btn_active");
+        $(".header").removeClass("header_active");
+    })
+
+
     $(".header__callback").click(function(e) {
+        e.preventDefault();
+        $(".popup").toggleClass('popup_active');
+
+    })
+
+    $(".urist__item-btn").click(function(e) {
         e.preventDefault();
         $(".popup").toggleClass('popup_active');
 
@@ -214,7 +221,7 @@
                 $(this).addClass('header__link_active');
             }
         });
-    })(jQuery);
+    });
 
 
 
