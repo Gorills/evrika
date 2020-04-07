@@ -26,7 +26,9 @@
             <div class="ipoteka__inner">
                 <div class="ipoteka__left">
                     <h1 class="ipoteka__title">Ипотека с нами дешевле!</h1>
-                    <p class="ipoteka__text">Lorem ipsum dolor sit <span class="ipoteka__text_accent">0,7%</span> commodi earum perspiciatis. Reiciendis.</p>
+                    <p class="ipoteka__text">Ипотека от <span class="ipoteka__text_accent">2,7%</span></p>
+                    <p class="ipoteka__text">Без первоначального взноса</p>
+                    <p class="ipoteka__text">Одобрение за <span class="ipoteka__text_accent">3</span> часа</p>
                 </div>
                 <div class="ipoteka__right">
                     <h2 class="ipoteka__right_title">Оставьте заявку</h2>

@@ -67,6 +67,9 @@
 
 
 <header class="header">
+    <div class="header-closer">
+
+    </div>
     <div class="container">
         <div class="header__inner">
 {{--            <a class="header__logo-link" href="{{ url('/') }}">--}}
@@ -80,18 +83,16 @@
                 <a href="{{url('/kommercheskaya-nedvizhimost')}}" class="header__link">Коммерческая недвижимость</a>
                 <a href="{{url('/yuridicheskie-uslugi')}}" class="header__link">Юридические услуги</a>
             </nav>
+
+
+
             <div class="header__social">
-
-
                 <div class="header__social-item">
-
                     <a href="#" class="header__callback">
                         <p>8 (3822) 959-039</p>
                         <p>Обратный звонок</p>
 
                     </a>
-
-
                     <a href="#" class="header__social-icon social-icon-one">
                         <i class="fab fa-whatsapp"></i>
                     </a>
@@ -114,12 +115,50 @@
         </div>
 
 
-        <div class="header-bottom">
+{{--        <div class="header-bottom">--}}
+{{--            <div class="header-bottom__row">--}}
+{{--                <div class="header-bottom__column">--}}
+{{--                    <h3 class="header-bottom__title">Купить</h3>--}}
+{{--                    <a href="#" class="header-bottom__link">Купить квартиру</a>--}}
+{{--                    <a href="#" class="header-bottom__link">Квартира в новостройке</a>--}}
+{{--                    <a href="#" class="header-bottom__link">Загородная недвижимость</a>--}}
+{{--                    <a href="#" class="header-bottom__link">Дома</a>--}}
 
+{{--                </div>--}}
+{{--                <div class="header-bottom__column">--}}
+{{--                    <h3 class="header-bottom__title">Продать</h3>--}}
+{{--                    <a href="#" class="header-bottom__link">Купить квартиру</a>--}}
+{{--                    <a href="#" class="header-bottom__link">Квартира в новостройке</a>--}}
+{{--                    <a href="#" class="header-bottom__link">Загородная недвижимость</a>--}}
+{{--                    <a href="#" class="header-bottom__link">Дома</a>--}}
 
+{{--                </div>--}}
+{{--                <div class="header-bottom__column">--}}
+{{--                    <h3 class="header-bottom__title">Ипотека</h3>--}}
+{{--                    <a href="#" class="header-bottom__link">Купить квартиру</a>--}}
+{{--                    <a href="#" class="header-bottom__link">Квартира в новостройке</a>--}}
+{{--                    <a href="#" class="header-bottom__link">Загородная недвижимость</a>--}}
+{{--                    <a href="#" class="header-bottom__link">Дома</a>--}}
+
+{{--                </div>--}}
+{{--                <div class="header-bottom__column">--}}
+{{--                    <h3 class="header-bottom__title">Коммерция</h3>--}}
+{{--                    <a href="#" class="header-bottom__link">Купить квартиру</a>--}}
+{{--                    <a href="#" class="header-bottom__link">Квартира в новостройке</a>--}}
+{{--                    <a href="#" class="header-bottom__link">Загородная недвижимость</a>--}}
+{{--                    <a href="#" class="header-bottom__link">Дома</a>--}}
+
+{{--                </div>--}}
+
+{{--            </div>--}}
         </div>
-    </div>
+
 </header>
+
+
+
+
+
 @yield('content')
 <footer class="footer">
     <div class="container">
@@ -160,14 +199,22 @@
         $(this).toggleClass('menu-btn_active');
         $(".header-bottom").toggleClass('header-bottom_active');
         $(".header").toggleClass('header-mobile-active');
+        $(".header-closer").toggleClass('header-closer_active');
 
     })
     $(".header__link").click(function(e) {
         // e.preventDefault();
         $(".menu-btn").removeClass("menu-btn_active");
         $(".header").removeClass("header_active");
+        $(".header-closer").removeClass('header-closer_active');
     })
-
+    $(".header-closer").click(function(e) {
+        // e.preventDefault();
+        $('.menu-btn').toggleClass('menu-btn_active');
+        $(".header-bottom").toggleClass('header-bottom_active');
+        $(".header").toggleClass('header-mobile-active');
+        $(".header-closer").toggleClass('header-closer_active');
+    })
 
     $(".header__callback").click(function(e) {
         e.preventDefault();

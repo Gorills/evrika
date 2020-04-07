@@ -26,7 +26,11 @@
             <div class="ipoteka__inner">
                 <div class="ipoteka__left">
                     <h1 class="ipoteka__title">Покупать с нами выгодно!</h1>
-                    <p class="ipoteka__text">Lorem ipsum dolor sit <span class="ipoteka__text_accent">0,7%</span> commodi earum perspiciatis. Reiciendis.</p>
+                    <p class="ipoteka__text">Под сдачу</p>
+                    <p class="ipoteka__text">Для себя</p>
+                    <p class="ipoteka__text">С материнским капиталом</p>
+                    <p class="ipoteka__text">Загородная недвижимость</p>
+                    <p class="ipoteka__text">Банкроты</p>
                 </div>
                 <div class="ipoteka__right">
                     <h2 class="ipoteka__right_title">Оставьте заявку</h2>

@@ -249,13 +249,11 @@ h1, h2, h3, h4, h5, h6, p
     left: 0
     right: 0
     width: 100%
-
     z-index: 2
-
-
     transition: $transition
     // header__inner
     &__inner
+        position: relative
         width: 100%
         margin: 0 auto
         border-bottom: $border
@@ -266,7 +264,6 @@ h1, h2, h3, h4, h5, h6, p
     //  header__logo-link
     &__logo-link
         display: block
-
     // header__logo
     &__logo
         height: 60px
@@ -284,6 +281,7 @@ h1, h2, h3, h4, h5, h6, p
         letter-spacing: 0.45px
         font-weight: 500
         position: relative
+        z-index: 12
         &::after
             content: ''
             position: absolute
@@ -306,6 +304,8 @@ h1, h2, h3, h4, h5, h6, p
     &__social
         display: flex
         align-items: flex-end
+        position: relative
+        z-index: 12
     // header__callback
     &__callback
         margin-right: 25px
@@ -317,8 +317,6 @@ h1, h2, h3, h4, h5, h6, p
         margin-bottom: -5px
         &:hover
             color: #fff
-
-
     // header__social-item
     &__social-item
         display: flex
@@ -382,22 +380,57 @@ h1, h2, h3, h4, h5, h6, p
 //.social-icon-three
 //    background-color: $color-hover-alter3
 // header-bottom
-.header-bottom
-    background-color: rgba(255, 255, 255, 1)
-    box-shadow: $box-shadow
-    height: 0
-    display: flex
-    justify-content: center
-    align-items: center
+//.header-bottom
+//    background-color: rgba(255, 255, 255, 1)
+//    box-shadow: $box-shadow
+//    height: 0
+//    display: flex
+//    justify-content: center
+//    align-items: center
+//    position: absolute
+//    top: 54px
+//    z-index: 10
+//    width: 100%
+//    max-width: 1170px
+//    //transition: $transition
+//    &__row
+//        display: none
+//        width: 100%
+//        justify-content: space-between
+//        //transition: all 1s ease
+//    &__column
+//        display: flex
+//        flex-direction: column
+//    &__column + &__column
+//
+//
+//    &__title
+//        text-align: center
+//        margin-bottom: 20px
+//    &__link
+//        text-decoration: none
+//        color: #333
+//        &:hover
+//            color: $accent-hover
+//    &__link + &__link
+//        margin-top: 10px
+//    &_active
+//        height: 250px
+//        padding: 20px 40px
+//        .header-bottom__row
+//            display: flex
+
+
+.header-closer
     position: absolute
-    top: 54px
-    z-index: 10
+    top: 0
+    left: -100%
     width: 100%
-    max-width: 1170px
-    transition: $transition
+    bottom: 0
+    z-index: 11
     &_active
-        height: 400px
-        padding: 20px 40px
+        left: 0
+
 
 .link-none
     display: none
@@ -862,7 +895,7 @@ h1, h2, h3, h4, h5, h6, p
     left: 15px
     rotation: 180deg
 .next
-    right: 15px
+    right: 0
 
 .ipoteka
     width: 100%
@@ -896,7 +929,7 @@ h1, h2, h3, h4, h5, h6, p
         z-index: 9
         display: flex
         flex-direction: column
-        align-items: center
+        //align-items: center
     // .ipoteka__title
     &__title
         font-size: 48px
@@ -906,6 +939,7 @@ h1, h2, h3, h4, h5, h6, p
     &__text
         font-size: 36px
         line-height: 1.2
+        margin-bottom: 20px
         // .ipoteka__text_accent
         &_accent
             background-color: $color-hover

@@ -26,7 +26,9 @@
             <div class="ipoteka__inner">
                 <div class="ipoteka__left">
                     <h1 class="ipoteka__title">Продажа за <span class="ipoteka__text_accent">14</span> дней</h1>
-                    <p class="ipoteka__text"></p>
+                    <p class="ipoteka__text">Trade-in</p>
+                    <p class="ipoteka__text">Бесплатная оценка квартиры</p>
+                    <p class="ipoteka__text">Загородная недвижимость</p>
                 </div>
                 <div class="ipoteka__right">
                     <h2 class="ipoteka__right_title">Оставьте заявку</h2>

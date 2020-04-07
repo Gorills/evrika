@@ -194,29 +194,26 @@
     <div class="container">
         <div class="about__inner">
             <div class="about__item">
-                <h3 class="about__title">Заголовок для сео текста</h3>
-                <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-                    aspernatur doloribus et eveniet maxime, modi nobis numquam odio omnis pariatur placeat quas
-                    reiciendis repellendus, rerum sequi sunt unde voluptas voluptatem?</p>
+                <h3 class="about__title">«РосНедвижимость» — Ваш незаменимый помощник в мире недвижимости Томска.</h3>
+                <p class="about__text">Как стать лучшим агентством недвижимости в городе? Нужно досконально знать особенности городской недвижимости,
+                    любить своих клиентов, находить к каждому индивидуальный подход и устанавливать разумные комиссионные.</p>
+
+                <p class="about__text">Именно так мы стараемся действовать!</p>
+
+
+                <p class="about__text">Наше агентство – это компания, которая всегда рядом, когда перед Вами стоит вопрос покупки или продажи жилья. Мы решаем этот вопрос всегда в Вашу пользу! Для нас самое ценное – это Ваши интересы. Наши компетенции заточены на то, чтобы найти покупателей для Вашей недвижимости, если Вы - продавец, и найти оптимальный вариант для покупки – если Вы покупатель.</p>
 
                 <ul class="about__list">
-                    <li class="about__list_item">1</li>
-                    <li class="about__list_item">2</li>
-                    <li class="about__list_item">3</li>
-                    <li class="about__list_item">4</li>
-                    <li class="about__list_item">5</li>
+                    <li class="about__list_item">Купля-продажа недвижимости на первичном и вторичном рынках</li>
+                    <li class="about__list_item">Операции с коммерческой недвижимостью</li>
+                    <li class="about__list_item">Аренда жилья и коммерческих объектов</li>
+                    <li class="about__list_item">Оформление ипотеки</li>
+                    <li class="about__list_item">Юридическое сопровождение сделок с недвижимостью</li>
                 </ul>
 
+                <p class="about__text">С нами Вы можете безопасно и без лишних хлопот инвестировать свои средства или получить средства от продажи.</p>
 
-
-                <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-                    aspernatur doloribus et eveniet maxime, modi nobis numquam odio omnis pariatur placeat quas
-                    reiciendis repellendus, rerum sequi sunt unde voluptas voluptatem?</p>
-
-
-                <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-                    aspernatur doloribus et eveniet maxime, modi nobis numquam odio omnis pariatur placeat quas
-                    reiciendis repellendus, rerum sequi sunt unde voluptas voluptatem?</p>
+                <p class="about__text">Услуги агентства Алатарцев Недвижимость</p>
 
                 <div class="about__info">
                     <h4 class="about__h4">Заголовок</h4>

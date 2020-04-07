@@ -25,8 +25,10 @@
         <div class="container">
             <div class="ipoteka__inner">
                 <div class="ipoteka__left">
-                    <h1 class="ipoteka__title">Ипотека с нами дешевле!</h1>
-                    <p class="ipoteka__text">Lorem ipsum dolor sit <span class="ipoteka__text_accent">0,7%</span> commodi earum perspiciatis. Reiciendis.</p>
+                    <h1 class="ipoteka__title">Коммерческая недвижимость - это просто!</h1>
+                    <p class="ipoteka__text">Инвестиции в недвижимость</p>
+                    <p class="ipoteka__text">Найти арендатора</p>
+                    <p class="ipoteka__text">Коммерческое управление</p>
                 </div>
                 <div class="ipoteka__right">
                     <h2 class="ipoteka__right_title">Оставьте заявку</h2>
