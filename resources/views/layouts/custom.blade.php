@@ -163,29 +163,42 @@
 <footer class="footer">
     <div class="container">
         <div class="footer__inner">
-            <div class="footer__contacts">
-                <p class="footer__title">Контакты</p>
-                <a href="{{ url('/map') }}" class="footer__links"><i class="footer__icon fas fa-map-marker-alt"></i> г.Томск, пл. Батенькова 2, офис ...</a>
-                <a href="{{ url('/map') }}" class="footer__links"><i class="footer__icon fas fa-phone"></i> 8952598965</a>
-                <a href="{{ url('/map') }}" class="footer__links"><i class="footer__icon fas fa-envelope"></i> mail@mail.com</a>
+            <div class="footer__column">
+                <p class="footer__phone">8 (3822) 650-606</p>
+                <a href="mailto:mail@mail.ru" class="footer__mail">mail@mail.ru</a>
+                <div class="footer__social">
+                    <a href="#"><i class="footer__icon fab fa-vk"></i></a>
+                    <a href="#"><i class="footer__icon fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="footer__icon fab fa-instagram"></i></a>
+                </div>
+                <p class="footer__text">© ООО «Эврика»,
+                    1996— 2020</p>
+                <p class="footer__text">Все права защищены</p>
+
+                <a href="#" class="footer__razrab">Разработка сайта: Gagarin</a>
             </div>
-            <nav class="footer__nav">
-                <p class="footer__title">Меню</p>
-                <a class="footer__links" href="{{ url('/') }}">Главная</a>
-                <a class="footer__links" href="{{ url('/prodat') }}">Продать недвижимость</a>
-                <a class="footer__links" href="{{ url('/kupit') }}">Купить недвижимость </a>
-                <a class="footer__links" href="{{ url('/kommercheskaya-nedvizhimost') }}">Коммерческая недвижимость</a>
-                <a class="footer__links" href="{{ url('/map') }}">О нас </a>
-
-            </nav>
-            <div class="footer__submenu">
-                <p class="footer__title">Услуги</p>
-                <a class="footer__links" href="{{ url('/map') }}">Юридические услуги</a>
-                <a class="footer__links" href="{{ url('/ipoteka') }}">Ипотека</a>
-
-
+            <div class="footer__column">
+                <p class="footer__title">Каталог</p>
+                <a href="#" class="footer__link">Купить</a>
+                <a href="#" class="footer__link">Продать</a>
+                <a href="#" class="footer__link">Ипотека</a>
+                <a href="#" class="footer__link">Новостройки</a>
+                <a href="#" class="footer__link">Юридические услуги</a>
 
             </div>
+            <div class="footer__column">
+                <p class="footer__title">О нас</p>
+                <a href="#" class="footer__link">Купить</a>
+                <a href="#" class="footer__link">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, repellat.</a>
+                <p class="footer__title footer__mt">Ипотека</p>
+                <a href="#" class="footer__link">Условия ипотеки</a>
+            </div>
+            <div class="footer__column">
+                <a href="#" class="footer__title">Услуги</a>
+                <a href="#" class="footer__title">Вакансии</a>
+
+            </div>
+
         </div>
 {{--        <a class="footer__logo-link" href="{{ url('/') }}"><img class="footer__logo" src="{{ asset('images/001.png') }}" alt=""></a>--}}
     </div>
@@ -223,6 +236,11 @@
     })
 
     $(".urist__item-btn").click(function(e) {
+        e.preventDefault();
+        $(".popup").toggleClass('popup_active');
+
+    })
+    $(".posadochnaya__btn").click(function(e) {
         e.preventDefault();
         $(".popup").toggleClass('popup_active');
 

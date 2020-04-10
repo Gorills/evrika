@@ -23,10 +23,20 @@
         <div class="container">
             <div class="posadochnaya__inner">
                 <h1 class="posadochnaya__title">{{ $stock->title }}</h1>
-
+                <p class="posadochnaya__short-description">{{ $stock->description }}</p>
+                <p class="posadochnaya__description">{{ $stock->full_description }}</p>
             </div>
         </div>
+        <a href="#" class="btn btn__accent posadochnaya__btn">Оставить заявку!</a>
+        <img class="posadochnaya__img" src="{{ Storage::url($stock->image) }}" alt="{{ $stock->title }}">
+
+
+
     </section>
+
+
+
+
 
 
 
