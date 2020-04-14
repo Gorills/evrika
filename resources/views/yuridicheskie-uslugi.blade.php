@@ -214,6 +214,7 @@
 
             </div>
         </div>
+        <img src="{{ asset('images/urist-bg.jpg') }}" alt="Юридические услуги в Томске" class="urist__bg">
     </div>
 
 

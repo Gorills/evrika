@@ -3,7 +3,7 @@
 @import "toggle"
 
 body
-    margin: 0!important
+    margin: 0
     padding: 0
     font-size: 15px
     color: #333
@@ -20,6 +20,11 @@ h1, h2, h3, h4, h5, h6, p
     margin: 0
 h1, h2, h3, h4, h5, h6, p
     padding: 0
+
+button
+    cursor: pointer
+
+
 
 
 // pagination
@@ -114,43 +119,46 @@ h1, h2, h3, h4, h5, h6, p
     border-bottom-right-radius: 0.2rem
 
 
-// breadcrumb
-.breadcrumb
-    display: flex
-    flex-wrap: wrap
-    padding: 0.75rem 1rem
-    margin-bottom: 1rem
-    margin-top: 0
-    list-style: none
-    //border-bottom: $border
-    //background-color: #e9ecef
-    //border-radius: 0.25rem
-
-
-
-.breadcrumb-item + .breadcrumb-item
-    padding-left: 0.5rem
-
-
-.breadcrumb-item + .breadcrumb-item::before
-    display: inline-block
-    padding-right: 0.5rem
-    color: #6c757d
-    content: "/"
-
-.breadcrumb-item + .breadcrumb-item:hover::before
-    //text-decoration: underline
-
-.breadcrumb-item + .breadcrumb-item:hover::before
-    text-decoration: none
-
-
-.breadcrumb-item.active
-    color: #6c757d
-
-.breadcrumb-item a
-
-    color: #333
+//// breadcrumb
+//.breadcrumb
+//    display: flex
+//    flex-wrap: wrap
+//    padding: 0.75rem 1rem
+//    margin-bottom: 1rem
+//    margin-top: 0
+//    list-style: none
+//    position: relative
+//    z-index: 1
+//    background-color: #fff
+//    //border-bottom: $border
+//    //background-color: #e9ecef
+//    //border-radius: 0.25rem
+//
+//
+//
+//.breadcrumb-item + .breadcrumb-item
+//    padding-left: 0.5rem
+//
+//
+//.breadcrumb-item + .breadcrumb-item::before
+//    display: inline-block
+//    padding-right: 0.5rem
+//    color: #6c757d
+//    content: "/"
+//
+//.breadcrumb-item + .breadcrumb-item:hover::before
+//    //text-decoration: underline
+//
+//.breadcrumb-item + .breadcrumb-item:hover::before
+//    text-decoration: none
+//
+//
+//.breadcrumb-item.active
+//    color: #6c757d
+//
+//.breadcrumb-item a
+//
+//    color: #333
 
 
 .container
@@ -874,7 +882,10 @@ h1, h2, h3, h4, h5, h6, p
 
 // breadcrambs
 .breadcrumbs
-
+    padding: 1px 0
+    position: relative
+    z-index: 1
+    background-color: #fff
     // .breadcrumbs__inner
     &__inner
         list-style: none
@@ -969,12 +980,21 @@ h1, h2, h3, h4, h5, h6, p
         font-size: 36px
         line-height: 1.2
         margin-bottom: 20px
+        color: #333
+        text-decoration: none
+        &:hover
+            color: $accent-hover
+
         // .ipoteka__text_accent
         &_accent
             background-color: $color-hover
             padding: 3px 6px
             color: #fff
             font-weight: 700
+    // ipoteka__icon
+    &__icon
+        font-size: 18px
+
     // .ipoteka__right
     &__right
         z-index: 9
@@ -1022,10 +1042,63 @@ h1, h2, h3, h4, h5, h6, p
     &__link
         color: #333
 
+
+.podrobnee
+    width: 100%
+    margin: 0 auto
+    /* .podrobnee__inner */
+    &__inner
+        width: 100%
+        margin: 0 auto
+    /* podrobnee__item */
+    &__item
+        padding: 40px 0
+    &__item + &__item
+        border-top: 1px solid $accent-hover
+    /* .podrobnee__title */
+    &__title
+        text-align: center
+        margin-bottom: 20px
+        font-size: 25px
+    /* .podrobnee__text */
+    &__text
+        margin-bottom: 20px
+    /* podrobnee__wrapper */
+    &__wrapper
+        text-align: center
+        width: 100%
+        margin: 0 auto
+    /* .podrobnee__btn */
+    &__btn
+        margin: 0 auto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .urist
     width: 100%
     margin: 0 auto
     padding: 40px 0
+    position: relative
+    //background-color: #fff
     // .urist__inner
     &__inner
         width: 100%
@@ -1034,6 +1107,7 @@ h1, h2, h3, h4, h5, h6, p
     &__title
         text-align: center
         margin-bottom: 60px
+        //color: $accent-hover
     // .urist__grid
     &__grid
         display: grid
@@ -1043,6 +1117,7 @@ h1, h2, h3, h4, h5, h6, p
     &__item
         padding: 25px
         border: $border
+        background-color: rgba(255, 255, 255, 0.8)
     // .urist__item-column
     &__item-column
         width: 100%
@@ -1100,8 +1175,16 @@ h1, h2, h3, h4, h5, h6, p
     &__item-btn
         margin: 0 auto
         text-align: center
-
-
+    // .urist__bg
+    &__bg
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        width: 100%
+        z-index: -1
+        opacity: 40%
+        background-color: #fff
 
 
 
@@ -1123,8 +1206,7 @@ h1, h2, h3, h4, h5, h6, p
         margin-bottom: 40px
     /* .footer__column */
     &__column
-        display: flex
-        flex-direction: column
+        display: block
     /* .footer__phone */
     &__phone
         font-size: 24px
@@ -1153,19 +1235,25 @@ h1, h2, h3, h4, h5, h6, p
         font-weight: 300
     /* .footer__razrab */
     &__razrab
+        display: block
         margin-top: 20px
         color: #3b3b3b
         text-decoration: none
     /* .footer__title */
     &__title
+        display: block
         font-size: 17px
         font-weight: 700
         margin-bottom: 15px
         text-decoration: none
         color: #3b3b3b
         text-transform: uppercase
+    /* footer__item */
+    &__item
+        display: block
     /* .footer__link */
     &__link
+        display: inline-block
         text-decoration: none
         color: #3b3b3b
         font-weight: 300
@@ -1174,8 +1262,7 @@ h1, h2, h3, h4, h5, h6, p
         &:hover
             color: $accent-hover
             text-decoration: underline
-
-    &__link + &__link
+    &__item + &__item
         margin-top: 10px
     /* .footer__mt
     &__mt

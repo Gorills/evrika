@@ -26,11 +26,11 @@
             <div class="ipoteka__inner">
                 <div class="ipoteka__left">
                     <h1 class="ipoteka__title">Покупать с нами выгодно!</h1>
-                    <p class="ipoteka__text">Под сдачу</p>
-                    <p class="ipoteka__text">Для себя</p>
-                    <p class="ipoteka__text">С материнским капиталом</p>
-                    <p class="ipoteka__text">Загородная недвижимость</p>
-                    <p class="ipoteka__text">Банкроты</p>
+                    <a href="#sdacha" class="ipoteka__text">Под сдачу <i class="ipoteka__icon fas fa-angle-double-down"></i></a>
+                    <a href="#myself" class="ipoteka__text">Для себя <i class="ipoteka__icon fas fa-angle-double-down"></i></a>
+                    <a href="#matkap" class="ipoteka__text">С материнским капиталом <i class="ipoteka__icon fas fa-angle-double-down"></i></a>
+                    <a href="#zagorod" class="ipoteka__text">Загородная недвижимость <i class="ipoteka__icon fas fa-angle-double-down"></i></a>
+                    <a href="#bankrot" class="ipoteka__text">Банкроты <i class="ipoteka__icon fas fa-angle-double-down"></i></a>
                 </div>
                 <div class="ipoteka__right">
                     <h2 class="ipoteka__right_title">Оставьте заявку</h2>
@@ -52,6 +52,53 @@
 
 
 
+    <section class="podrobnee">
+        <div class="container">
+            <div class="podrobnee__inner">
+                <div id="sdacha" class="podrobnee__item">
+                    <h3 class="podrobnee__title">Под сдачу</h3>
+                    <p class="podrobnee__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, dignissimos dolores expedita facilis in laborum mollitia necessitatibus neque quidem vero. Aperiam cum excepturi inventore nisi praesentium quaerat similique sint soluta?</p>
+                    <p class="podrobnee__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, dignissimos dolores expedita facilis in laborum mollitia necessitatibus neque quidem vero. Aperiam cum excepturi inventore nisi praesentium quaerat similique sint soluta?</p>
+                    <p class="podrobnee__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, dignissimos dolores expedita facilis in laborum mollitia necessitatibus neque quidem vero. Aperiam cum excepturi inventore nisi praesentium quaerat similique sint soluta?</p>
+                    <div class="podrobnee__wrapper">
+                        <a href="#" class="podrobnee__btn btn btn__accent">Заказать консультацию</a>
+                    </div>
+                </div>
+                <div id="myself" class="podrobnee__item">
+                    <h3 class="podrobnee__title">Для себя</h3>
+                    <p class="podrobnee__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, dignissimos dolores expedita facilis in laborum mollitia necessitatibus neque quidem vero. Aperiam cum excepturi inventore nisi praesentium quaerat similique sint soluta?</p>
+                    <p class="podrobnee__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, dignissimos dolores expedita facilis in laborum mollitia necessitatibus neque quidem vero. Aperiam cum excepturi inventore nisi praesentium quaerat similique sint soluta?</p>
+                    <div class="podrobnee__wrapper">
+                        <a href="#" class="podrobnee__btn btn btn__accent">Заказать консультацию</a>
+                    </div>
+                </div>
+                <div id="matkap" class="podrobnee__item">
+                    <h3 class="podrobnee__title">Под сдачу</h3>
+                    <p class="podrobnee__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, dignissimos dolores expedita facilis in laborum mollitia necessitatibus neque quidem vero. Aperiam cum excepturi inventore nisi praesentium quaerat similique sint soluta?</p>
+                    <p class="podrobnee__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, dignissimos dolores expedita facilis in laborum mollitia necessitatibus neque quidem vero. Aperiam cum excepturi inventore nisi praesentium quaerat similique sint soluta?</p>
+                    <div class="podrobnee__wrapper">
+                        <a href="#" class="podrobnee__btn btn btn__accent">Заказать консультацию</a>
+                    </div>
+                </div>
+                <div id="zagorod" class="podrobnee__item">
+                    <h3 class="podrobnee__title">Под сдачу</h3>
+                    <p class="podrobnee__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, dignissimos dolores expedita facilis in laborum mollitia necessitatibus neque quidem vero. Aperiam cum excepturi inventore nisi praesentium quaerat similique sint soluta?</p>
+                    <p class="podrobnee__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, dignissimos dolores expedita facilis in laborum mollitia necessitatibus neque quidem vero. Aperiam cum excepturi inventore nisi praesentium quaerat similique sint soluta?</p>
+                    <div class="podrobnee__wrapper">
+                        <a href="#" class="podrobnee__btn btn btn__accent">Заказать консультацию</a>
+                    </div>
+                </div>
+                <div id="bankrot" class="podrobnee__item">
+                    <h3 class="podrobnee__title">Под сдачу</h3>
+                    <p class="podrobnee__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, dignissimos dolores expedita facilis in laborum mollitia necessitatibus neque quidem vero. Aperiam cum excepturi inventore nisi praesentium quaerat similique sint soluta?</p>
+                    <p class="podrobnee__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, dignissimos dolores expedita facilis in laborum mollitia necessitatibus neque quidem vero. Aperiam cum excepturi inventore nisi praesentium quaerat similique sint soluta?</p>
+                    <div class="podrobnee__wrapper">
+                        <a href="#" class="podrobnee__btn btn btn__accent">Заказать консультацию</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 

@@ -157,8 +157,6 @@
 
 
 
-
-
 @yield('content')
 <footer class="footer">
     <div class="container">
@@ -179,23 +177,46 @@
             </div>
             <div class="footer__column">
                 <p class="footer__title">Каталог</p>
-                <a href="#" class="footer__link">Купить</a>
-                <a href="#" class="footer__link">Продать</a>
-                <a href="#" class="footer__link">Ипотека</a>
-                <a href="#" class="footer__link">Новостройки</a>
-                <a href="#" class="footer__link">Юридические услуги</a>
+                <div class="footer__item">
+                    <a href="/kupit" class="footer__link">Купить</a>
+                </div>
+                <div class="footer__item">
+                    <a href="/prodat" class="footer__link">Продать</a>
+                </div>
+                <div class="footer__item">
+                    <a href="/ipoteka" class="footer__link">Ипотека</a>
+                </div>
+                <div class="footer__item">
+                    <a href="/kommercheskaya-nedvizhimost" class="footer__link">Коммерческая недвижимость</a>
+                </div>
+                <div class="footer__item">
+                    <a href="/yuridicheskie-uslugi" class="footer__link">Юридические услуги</a>
+                </div>
 
             </div>
             <div class="footer__column">
                 <p class="footer__title">О нас</p>
-                <a href="#" class="footer__link">Купить</a>
-                <a href="#" class="footer__link">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, repellat.</a>
+                <div class="footer__item">
+                    <a href="/about" class="footer__link">О компании</a>
+                </div>
+                <div class="footer__item">
+                    <a href="#" class="footer__link">Юридическая информация</a>
+                </div>
+
+
                 <p class="footer__title footer__mt">Ипотека</p>
-                <a href="#" class="footer__link">Условия ипотеки</a>
+
+                <div class="footer__item">
+                    <a href="/ipoteka" class="footer__link">Условия ипотеки</a>
+                </div>
             </div>
             <div class="footer__column">
-                <a href="#" class="footer__title">Услуги</a>
-                <a href="#" class="footer__title">Вакансии</a>
+                <div class="footer__item">
+                    <a href="/#uslugi" class="footer__title">Услуги</a>
+                </div>
+                <div class="footer__item">
+                    <a href="/vacancy" class="footer__title">Вакансии</a>
+                </div>
 
             </div>
 
@@ -245,6 +266,11 @@
         $(".popup").toggleClass('popup_active');
 
     })
+    $(".podrobnee__btn").click(function(e) {
+        e.preventDefault();
+        $(".popup").toggleClass('popup_active');
+
+    })
 
     $(".popup__close").click(function(e) {
         e.preventDefault();
@@ -273,7 +299,7 @@
     });
 
     $("body").on('click', '[href*="#"]', function(e){
-        var fixed_offset = 60;
+        var fixed_offset = 120;
         $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
         e.preventDefault();
     });
