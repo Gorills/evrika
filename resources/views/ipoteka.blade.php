@@ -48,6 +48,82 @@
         <img class="ipoteka__img" src="{{ asset('images/poteka-background.jpg') }}" alt="">
     </section>
 
+    <div class="partners">
+        <div class="container">
+            <div class="partners__inner">
+                <h2 class="partners__titile">Помощь в получении ипотеки от банков-партнеров:</h2>
+                <p class="partners__text">Специальные условия банков для клиентов Компании «ИНКОМ-НЕДВИЖИМОСТЬ». Уважаемые клиенты, обращаясь к нам для
+                    решения своего жилищного вопроса, вы имеете возможность получить более привлекательные (и более выгодные) условия по ипотечному кредитованию</p>
+
+            <div class="partners__grid">
+
+                <a href="#" class="partners__item partners-one">
+                    <img src="{{ asset('images/partners/vtb_logo_ru.png') }}" alt="" class="partners__img">
+                    <div class="partners__text-mini">Лицензия № 1000 от 08.07.2015г.</div>
+
+                    <div class="partners__hidden hidden-one">
+                        <p class="partners__hidden-text">Банк ВТБ предоставляет преференцию (скидку по процентной ставке на весь срок кредитования)
+                            нашим клиентам в размере 0,3% на приобретение жилья на вторичном и первичном рынке с
+                            использованием ипотечного кредита банка.</p>
+                        <p class="partners__hidden-link">Сайт банка</p>
+                    </div>
+                </a>
+                <a href="#" class="partners__item partners-two">
+                    <img src="{{ asset('images/partners/2.jpg') }}" alt="" class="partners__img">
+                    <div class="partners__text-mini">Лицензия № 1000 от 08.07.2015г.</div>
+
+                    <div class="partners__hidden hidden-two">
+                        <p class="partners__hidden-text">Банк ВТБ предоставляет преференцию (скидку по процентной ставке на весь срок кредитования)
+                            нашим клиентам в размере 0,3% на приобретение жилья на вторичном и первичном рынке с
+                            использованием ипотечного кредита банка.</p>
+                        <p class="partners__hidden-link">Сайт банка</p>
+                    </div>
+                </a>
+                <a href="#" class="partners__item partners-three">
+                    <img src="{{ asset('images/partners/3.png') }}" alt="" class="partners__img">
+                    <div class="partners__text-mini">Лицензия № 1000 от 08.07.2015г.</div>
+
+                    <div class="partners__hidden hidden-three">
+                        <p class="partners__hidden-text">Банк ВТБ предоставляет преференцию (скидку по процентной ставке на весь срок кредитования)
+                            нашим клиентам в размере 0,3% на приобретение жилья на вторичном и первичном рынке с
+                            использованием ипотечного кредита банка.</p>
+                        <p class="partners__hidden-link">Сайт банка</p>
+                    </div>
+                </a>
+                <a href="#" class="partners__item partners-for">
+                    <img src="{{ asset('images/partners/4.png') }}" alt="" class="partners__img">
+                    <div class="partners__text-mini">Лицензия № 1000 от 08.07.2015г.</div>
+
+                    <div class="partners__hidden hidden-for">
+                        <p class="partners__hidden-text">Банк ВТБ предоставляет преференцию (скидку по процентной ставке на весь срок кредитования)
+                            нашим клиентам в размере 0,3% на приобретение жилья на вторичном и первичном рынке с
+                            использованием ипотечного кредита банка.</p>
+                        <p class="partners__hidden-link">Сайт банка</p>
+                    </div>
+                </a>
+                <a href="#" class="partners__item partners-five">
+                    <img src="{{ asset('images/partners/5.png') }}" alt="" class="partners__img">
+                    <div class="partners__text-mini">Лицензия № 1000 от 08.07.2015г.</div>
+
+                    <div class="partners__hidden hidden-five">
+                        <p class="partners__hidden-text">Банк ВТБ предоставляет преференцию (скидку по процентной ставке на весь срок кредитования)
+                            нашим клиентам в размере 0,3% на приобретение жилья на вторичном и первичном рынке с
+                            использованием ипотечного кредита банка.</p>
+                        <p class="partners__hidden-link">Сайт банка</p>
+                    </div>
+                </a>
+
+
+
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
 
     <section class="podrobnee">
         <div class="container">

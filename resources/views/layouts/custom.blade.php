@@ -283,9 +283,42 @@
 
     })
 
+    $(".partners-one").hover(function(e) {
+
+        $(this).toggleClass('partners__item_active');
+        $(".hidden-one").toggleClass('partners__hidden_active');
 
 
+    })
 
+    $(".partners-two").hover(function(e) {
+
+        $(this).toggleClass('partners__item_active');
+        $(".hidden-two").toggleClass('partners__hidden_active');
+
+
+    })
+    $(".partners-three").hover(function(e) {
+
+        $(this).toggleClass('partners__item_active');
+        $(".hidden-three").toggleClass('partners__hidden_active');
+
+
+    })
+    $(".partners-for").hover(function(e) {
+
+        $(this).toggleClass('partners__item_active');
+        $(".hidden-for").toggleClass('partners__hidden_active');
+
+
+    })
+    $(".partners-five").hover(function(e) {
+
+        $(this).toggleClass('partners__item_active');
+        $(".hidden-five").toggleClass('partners__hidden_active');
+
+
+    })
 
     $(window).scroll(function() {
         var height = $(window).scrollTop();
